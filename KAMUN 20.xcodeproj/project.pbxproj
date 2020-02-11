@@ -23,6 +23,8 @@
 		0B31F95423EFFB13007E8E99 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94A23EFFB13007E8E99 /* OpenSans-Regular.ttf */; };
 		0B31F95523EFFB13007E8E99 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94B23EFFB13007E8E99 /* OpenSans-LightItalic.ttf */; };
 		0B31F95623EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94C23EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf */; };
+		0B31F95F23F081BF007E8E99 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */; };
+		0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F96123F083A2007E8E99 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		0B31F94A23EFFB13007E8E99 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		0B31F94B23EFFB13007E8E99 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		0B31F94C23EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B31F96123F083A2007E8E99 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		0B31F91023EF4D21007E8E99 /* KAMUN 20 */ = {
 			isa = PBXGroup;
 			children = (
+				0B31F95A23F08118007E8E99 /* Cells */,
 				0B31F94223EFFAE6007E8E99 /* Fonts */,
 				0B31F94123EF4D32007E8E99 /* ViewControllers */,
 				0B31F91123EF4D21007E8E99 /* AppDelegate.swift */,
@@ -147,6 +152,7 @@
 		0B31F94123EF4D32007E8E99 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B31F96123F083A2007E8E99 /* DashboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +172,14 @@
 				0B31F94723EFFB13007E8E99 /* OpenSans-SemiboldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0B31F95A23F08118007E8E99 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B31F91223EF4D21007E8E99 /* AppDelegate.swift in Sources */,
+				0B31F95F23F081BF007E8E99 /* DashboardCollectionViewCell.swift in Sources */,
+				0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
