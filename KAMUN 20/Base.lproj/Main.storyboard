@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-yK-7Ja">
-                                <rect key="frame" x="15" y="225.5" width="207" height="30"/>
+                                <rect key="frame" x="15" y="225.5" width="207" height="26"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HTT-XD-ABL">
-                                <rect key="frame" x="0.0" y="288" width="414" height="161"/>
+                                <rect key="frame" x="0.0" y="284" width="414" height="161"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="20" id="cdD-6I-Tu1">
                                     <size key="itemSize" width="120" height="120"/>
@@ -59,16 +59,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="135" height="110"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-P1-1ad">
-                                                            <rect key="frame" x="30" y="18" width="75" height="74"/>
+                                                            <rect key="frame" x="28" y="16" width="79" height="78"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" red="0.46089220050000002" green="0.056367874149999997" blue="0.79239362479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="DhM-P1-1ad" firstAttribute="leading" secondItem="Hkg-Vy-KkJ" secondAttribute="leading" constant="30" id="20c-dR-mSv"/>
-                                                        <constraint firstItem="DhM-P1-1ad" firstAttribute="top" secondItem="Hkg-Vy-KkJ" secondAttribute="top" constant="18" id="ALi-VI-PEq"/>
-                                                        <constraint firstAttribute="trailing" secondItem="DhM-P1-1ad" secondAttribute="trailing" constant="30" id="RPv-yb-vnc"/>
-                                                        <constraint firstAttribute="bottom" secondItem="DhM-P1-1ad" secondAttribute="bottom" constant="18" id="xJQ-Rd-S6L"/>
+                                                        <constraint firstItem="DhM-P1-1ad" firstAttribute="leading" secondItem="Hkg-Vy-KkJ" secondAttribute="leading" constant="28" id="20c-dR-mSv"/>
+                                                        <constraint firstItem="DhM-P1-1ad" firstAttribute="top" secondItem="Hkg-Vy-KkJ" secondAttribute="top" constant="16" id="ALi-VI-PEq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DhM-P1-1ad" secondAttribute="trailing" constant="28" id="RPv-yb-vnc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DhM-P1-1ad" secondAttribute="bottom" constant="16" id="xJQ-Rd-S6L"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -81,8 +81,8 @@
                                         </constraints>
                                         <size key="customSize" width="135" height="110"/>
                                         <connections>
-                                            <outlet property="imageButton" destination="DhM-P1-1ad" id="5kH-42-0DI"/>
-                                            <outlet property="roundedView" destination="Hkg-Vy-KkJ" id="jlH-lq-Ui7"/>
+                                            <outlet property="imageButton" destination="DhM-P1-1ad" id="jE1-Fc-gT5"/>
+                                            <outlet property="roundedView" destination="Hkg-Vy-KkJ" id="5b0-Kg-4eg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -92,11 +92,11 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rb2-R8-mej">
-                                <rect key="frame" x="0.0" y="534" width="414" height="279"/>
+                                <rect key="frame" x="0.0" y="524.5" width="414" height="288.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-Lr-l5s">
-                                <rect key="frame" x="15" y="486" width="198.5" height="37"/>
+                                <rect key="frame" x="15" y="482" width="197" height="31.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiboldItalic" family="Open Sans" pointSize="27"/>
                                 <color key="textColor" red="0.46089220050000002" green="0.056367874149999997" blue="0.79239362479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

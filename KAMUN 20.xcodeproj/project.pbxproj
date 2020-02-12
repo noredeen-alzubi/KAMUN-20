@@ -23,8 +23,9 @@
 		0B31F95423EFFB13007E8E99 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94A23EFFB13007E8E99 /* OpenSans-Regular.ttf */; };
 		0B31F95523EFFB13007E8E99 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94B23EFFB13007E8E99 /* OpenSans-LightItalic.ttf */; };
 		0B31F95623EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F94C23EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf */; };
-		0B31F95F23F081BF007E8E99 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */; };
 		0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F96123F083A2007E8E99 /* DashboardViewController.swift */; };
+		0B60BB9423F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */; };
+		0B60BB9523F41DDE00BA4EF5 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B60BB9323F41DDE00BA4EF5 /* DashboardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +68,9 @@
 		0B31F94A23EFFB13007E8E99 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		0B31F94B23EFFB13007E8E99 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		0B31F94C23EFFB13007E8E99 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B31F96123F083A2007E8E99 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B60BB9323F41DDE00BA4EF5 /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,8 @@
 		0B31F95A23F08118007E8E99 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0B31F95D23F081BF007E8E99 /* DashboardCollectionViewCell.swift */,
+				0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */,
+				0B60BB9323F41DDE00BA4EF5 /* DashboardCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B31F95223EFFB13007E8E99 /* OpenSans-Italic.ttf in Resources */,
+				0B60BB9523F41DDE00BA4EF5 /* DashboardCollectionViewCell.xib in Resources */,
 				0B31F95423EFFB13007E8E99 /* OpenSans-Regular.ttf in Resources */,
 				0B31F95523EFFB13007E8E99 /* OpenSans-LightItalic.ttf in Resources */,
 				0B31F95123EFFB13007E8E99 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -324,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B31F91223EF4D21007E8E99 /* AppDelegate.swift in Sources */,
-				0B31F95F23F081BF007E8E99 /* DashboardCollectionViewCell.swift in Sources */,
+				0B60BB9423F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift in Sources */,
 				0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
