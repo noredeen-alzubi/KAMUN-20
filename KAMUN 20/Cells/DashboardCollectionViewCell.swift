@@ -13,15 +13,27 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageButton: UIImageView!
     @IBOutlet weak var roundedView: UIView!
+    @IBOutlet weak var cellButton: UIButton!
+    
+     var btnTapAction : (()->())?
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        roundedView.layer.cornerRadius = 7
+        roundedView.layer.cornerRadius = 12
         roundedView.layer.masksToBounds = true
-        //button.centerVertically()
+        cellButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+       
     }
     
+    @objc func btnTapped() {
+        print("Tapped!")
+        
+        // use our "call back" action to tell the controller the button was tapped
+        btnTapAction?()
+    }
     
     class var reuseIdentifier: String {
         return "DashboardCollectionViewCell"

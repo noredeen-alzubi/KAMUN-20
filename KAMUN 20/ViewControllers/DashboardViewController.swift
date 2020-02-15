@@ -15,8 +15,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     var iconArray = [UIImage(named:"schedule"), UIImage(named:"second")]
     
-    var labelArray = ["Schedule", "Map"]
-    
+    var destinations = [ScheduleViewController(), MapViewController()]
     
    
 
@@ -35,15 +34,64 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionViewCell", for: indexPath) as! DashboardCollectionViewCell
         
-          cell.configureCell(image: iconArray[indexPath.row]!)
+        cell.configureCell(image: iconArray[indexPath.row]!)
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 4, height: 4)
+        cell.layer.shadowRadius = 6.0
+        cell.layer.shadowOpacity = 0.75
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        
+        /*Tap.on(view: cell.roundedView){
+            //array of destinations
+            self.navigationController?.pushViewController(self.destinations[indexPath.row], animated: true)
+            
+        }*/
+        
+        cell.btnTapAction = {
+            () in
+            print("Edit tapped in cell", indexPath)
+            // start your edit process here...
+            let segue = "Segue" + String(indexPath.row)
+            self.performSegue(withIdentifier: segue, sender:self)
+        }
+        
         
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier {
+        case "Segue1":
+            if let destVC = segue.destination as? ScheduleViewController {
+                // Set the properties that need to be set in destVC
+                
+            }
+        case "Segue2":
+            if let destVC = segue.destination as? MapViewController {
+                // Set the properties that need to be set in destVC
+                
+            }
+            
+        default: break
+        }
+        
+    }
+    
+   
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: self.collectionView.frame.height * 0.77, height: self.collectionView.frame.height * 0.77)
+        return CGSize(width: self.collectionView.frame.height * 0.73, height: self.collectionView.frame.height * 0.73)
     }
+    
+    
+    
+    
     
 
     /*
