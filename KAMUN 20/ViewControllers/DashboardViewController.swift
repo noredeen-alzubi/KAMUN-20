@@ -35,7 +35,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    var iconArray = [UIImage(named:"schedule"), UIImage(named:"second")]
+    var iconArray = [UIImage(named:"schedule"), UIImage(named:"second"), UIImage(named:"second")]
     
     var destinations = [ScheduleViewController(), MapViewController()]
     

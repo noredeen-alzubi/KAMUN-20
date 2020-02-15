@@ -13,6 +13,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>ACaslonPro-Bold.otf</string>
 		<string>OpenSans-Italic.ttf</string>
 		<string>OpenSans-BoldItalic.ttf</string>
 		<string>OpenSans-Bold.ttf</string>
