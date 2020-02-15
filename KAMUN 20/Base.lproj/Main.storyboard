@@ -197,15 +197,56 @@
                                 <rect key="frame" x="0.0" y="197" width="414" height="616"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="177" id="Fgg-AO-09G">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="177"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="Fgg-AO-09G" customClass="ArticlesTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fgg-AO-09G" id="NUT-qu-xrH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gar-Gm-p6u">
+                                                    <rect key="frame" x="20" y="30.5" width="114" height="114"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gar-Gm-p6u" secondAttribute="height" multiplier="1:1" id="UPt-Ku-FGr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisici" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGo-C3-WGR">
+                                                    <rect key="frame" x="155" y="57.5" width="230" height="91.5"/>
+                                                    <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-nO-Qha">
+                                                    <rect key="frame" x="155" y="29.5" width="259" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="height" secondItem="NUT-qu-xrH" secondAttribute="height" multiplier="0.651429" id="CEN-DI-B5C"/>
+                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="leading" secondItem="gar-Gm-p6u" secondAttribute="trailing" constant="21" id="K6j-Rl-WtZ"/>
+                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="leading" secondItem="NUT-qu-xrH" secondAttribute="leading" constant="20" id="L9O-yH-42d"/>
+                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="top" secondItem="60Y-nO-Qha" secondAttribute="bottom" constant="7" id="Rh1-wh-FVn"/>
+                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="centerY" secondItem="NUT-qu-xrH" secondAttribute="centerY" id="VZX-eJ-tZC"/>
+                                                <constraint firstItem="60Y-nO-Qha" firstAttribute="leading" secondItem="gar-Gm-p6u" secondAttribute="trailing" constant="21" id="c8L-N7-dTB"/>
+                                                <constraint firstItem="60Y-nO-Qha" firstAttribute="width" secondItem="NUT-qu-xrH" secondAttribute="width" multiplier="0.625604" id="gGE-Gi-WnN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zGo-C3-WGR" secondAttribute="bottom" constant="15" id="qBz-K7-EFW"/>
+                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="width" secondItem="NUT-qu-xrH" secondAttribute="width" multiplier="0.555556" id="yxh-RJ-Hnh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleExtraLbl" destination="60Y-nO-Qha" id="nlo-ie-feX"/>
+                                            <outlet property="articleImgView" destination="gar-Gm-p6u" id="Gd1-Hl-J0f"/>
+                                            <outlet property="articleTitleTxt" destination="zGo-C3-WGR" id="a6x-aK-nHt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="KnJ-hv-Cn6"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="nXP-0Y-p8N"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
