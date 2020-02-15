@@ -7,13 +7,50 @@
 //
 
 import UIKit
+import  GoogleMaps
 
 class MapViewController: UIViewController {
+    
+    public var startingLocation: [Double] = [31.752567,35.846952]
+    
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        self.navigationController?.view.backgroundColor = nil
+
+       
+        
+    }
+    
+    override func loadView() {
+         let camera = GMSCameraPosition.camera(withLatitude: startingLocation[0], longitude: startingLocation[1], zoom: 17.5, bearing: 66, viewingAngle: 0)
+               let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+               mapView.mapType =  .satellite
+               mapView.settings.rotateGestures = false
+               mapView.settings.tiltGestures = false
+               mapView.isMyLocationEnabled = true
+               
+               for (name,location) in locationsOnMap{
+                   let position = CLLocationCoordinate2D(latitude: location[0], longitude: location[1])
+                   let marker = GMSMarker(position: position)
+                   marker.title = name
+                   marker.map = mapView
+                   marker.snippet = name
+                   
+                   if startingLocation.count == 2{
+                       
+                       if(location[0] == startingLocation[0] && location[1] == startingLocation[1]){
+                           mapView.selectedMarker = marker
+                       }
+                       
+                   }
+               }
+        
+        view = mapView
     }
     
 
