@@ -20,6 +20,9 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Dashboard View Controller-->
@@ -317,24 +320,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtZ-aO-xXs">
-                                <rect key="frame" x="69.5" y="479" width="275" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-F1-WXR">
-                                <rect key="frame" x="153.5" y="514.5" width="107" height="30"/>
-                                <state key="normal" title="Show on Map &gt;">
-                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-4F-0F8">
-                                <rect key="frame" x="138" y="429" width="138" height="36"/>
+                                <rect key="frame" x="124" y="416" width="167" height="55"/>
                                 <color key="backgroundColor" red="0.84290616455180578" green="1" blue="0.74085465558237351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="Sfq-4T-ucd"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
                                 <state key="normal" title="Find Location">
@@ -345,17 +333,31 @@
                                     <action selector="btnLocClicked:" destination="izy-fj-Lbg" eventType="touchUpInside" id="4vl-K8-uoc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtZ-aO-xXs">
+                                <rect key="frame" x="69.5" y="491" width="275" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-F1-WXR">
+                                <rect key="frame" x="153" y="534" width="107" height="30"/>
+                                <state key="normal" title="Show on Map &gt;">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7V3-4F-0F8" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="1MH-3n-n5E"/>
-                            <constraint firstItem="AJp-F1-WXR" firstAttribute="top" secondItem="RtZ-aO-xXs" secondAttribute="bottom" constant="15" id="1zs-bA-Nnv"/>
+                            <constraint firstItem="AJp-F1-WXR" firstAttribute="top" secondItem="RtZ-aO-xXs" secondAttribute="bottom" constant="22.5" id="1zs-bA-Nnv"/>
+                            <constraint firstItem="7V3-4F-0F8" firstAttribute="width" secondItem="PEW-db-B3V" secondAttribute="width" multiplier="0.403382" id="3Ag-HK-oGY"/>
                             <constraint firstItem="RtZ-aO-xXs" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="5Ht-2t-l2u"/>
-                            <constraint firstItem="RtZ-aO-xXs" firstAttribute="top" secondItem="7V3-4F-0F8" secondAttribute="bottom" constant="17" id="NZ4-af-OwJ"/>
+                            <constraint firstItem="RtZ-aO-xXs" firstAttribute="top" secondItem="7V3-4F-0F8" secondAttribute="bottom" constant="20" id="NZ4-af-OwJ"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="trailing" secondItem="jYF-2f-Axk" secondAttribute="trailing" id="Tnr-Zh-6al"/>
                             <constraint firstItem="7V3-4F-0F8" firstAttribute="top" secondItem="koe-Cz-91z" secondAttribute="bottom" constant="5" id="Xgq-VS-WmI"/>
                             <constraint firstItem="AJp-F1-WXR" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="ahx-2g-d3f"/>
                             <constraint firstItem="uGB-Sc-REH" firstAttribute="top" secondItem="jYF-2f-Axk" secondAttribute="top" constant="36" id="bjm-EH-szw"/>
+                            <constraint firstItem="7V3-4F-0F8" firstAttribute="height" secondItem="PEW-db-B3V" secondAttribute="height" multiplier="0.0613839" id="gmX-kj-O6R"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="top" secondItem="uGB-Sc-REH" secondAttribute="bottom" constant="8" id="iJg-m5-949"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="height" secondItem="PEW-db-B3V" secondAttribute="height" multiplier="0.3" id="j1H-kb-uFT"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="leading" secondItem="jYF-2f-Axk" secondAttribute="leading" id="mG7-Al-CFU"/>
