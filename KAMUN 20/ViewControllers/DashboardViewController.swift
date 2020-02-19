@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 var locationsOnMap = [
     "King Hussein bin Talal Humanities Wing": [31.751899,35.848381],
     "Michael Dagher Science Wing": [31.751776,35.847919],

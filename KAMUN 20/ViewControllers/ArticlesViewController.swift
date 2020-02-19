@@ -39,6 +39,13 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
          // Do any additional setup after loading the view.
         super.viewDidLoad()
         
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
         //testing
         articles.append(Article(title: "BREAKING NEWS: Delegates start war in HCC. BREAKING NEWS:w", author: "Abook Al-Zu'bi", text: "awdwadwadawda", image: UIImage(named: "ip")!))
         //testing

@@ -2,10 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>KAMUN 20 wants to show you where you are so you can navigate the conference venue.</string>
+	<string>KAMUN 20 wants to know your location to present weather data and show you where you are so you can navigate the conference venue.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>KAMUN 20 wants to show you where you are so you can navigate the conference venue.</string>
+	<string>KAMUN 20 wants to know your location to present weather data and show you where you are so you can navigate the conference venue.</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>googlechromes</string>
