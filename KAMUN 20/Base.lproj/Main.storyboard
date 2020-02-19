@@ -11,6 +11,12 @@
         <array key="ACaslonPro-Bold.otf">
             <string>ACaslonPro-Bold</string>
         </array>
+        <array key="ACaslonPro-Regular.otf">
+            <string>ACaslonPro-Regular</string>
+        </array>
+        <array key="ACaslonPro-Semibold.otf">
+            <string>ACaslonPro-Semibold</string>
+        </array>
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
@@ -161,7 +167,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="KAMUN_20" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ArticlesViewController" customModule="KAMUN_20" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,49 +203,52 @@
                                 <rect key="frame" x="0.0" y="197" width="414" height="616"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="Fgg-AO-09G" customClass="ArticlesTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="175"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="195" id="Fgg-AO-09G" customClass="ArticlesTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fgg-AO-09G" id="NUT-qu-xrH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gar-Gm-p6u">
-                                                    <rect key="frame" x="20" y="30.5" width="114" height="114"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="Q03-FF-CfD">
+                                                    <rect key="frame" x="20" y="36.5" width="122" height="122"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="gar-Gm-p6u" secondAttribute="height" multiplier="1:1" id="UPt-Ku-FGr"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="123" id="Mbo-Kf-CIY"/>
+                                                        <constraint firstAttribute="width" secondItem="Q03-FF-CfD" secondAttribute="height" multiplier="1:1" id="zBv-0b-0V1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisici" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGo-C3-WGR">
-                                                    <rect key="frame" x="155" y="57.5" width="230" height="91.5"/>
-                                                    <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-nO-Qha">
-                                                    <rect key="frame" x="155" y="29.5" width="259" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-1N-Wlv">
+                                                    <rect key="frame" x="164" y="36" width="133" height="22"/>
+                                                    <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is an example article title. This is the second sentece" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu7-e7-irC">
+                                                    <rect key="frame" x="164" y="59" width="230" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="VXM-qj-srB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ACaslonPro-Semibold" family="Adobe Caslon Pro" pointSize="19"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="height" secondItem="NUT-qu-xrH" secondAttribute="height" multiplier="0.651429" id="CEN-DI-B5C"/>
-                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="leading" secondItem="gar-Gm-p6u" secondAttribute="trailing" constant="21" id="K6j-Rl-WtZ"/>
-                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="leading" secondItem="NUT-qu-xrH" secondAttribute="leading" constant="20" id="L9O-yH-42d"/>
-                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="top" secondItem="60Y-nO-Qha" secondAttribute="bottom" constant="7" id="Rh1-wh-FVn"/>
-                                                <constraint firstItem="gar-Gm-p6u" firstAttribute="centerY" secondItem="NUT-qu-xrH" secondAttribute="centerY" id="VZX-eJ-tZC"/>
-                                                <constraint firstItem="60Y-nO-Qha" firstAttribute="leading" secondItem="gar-Gm-p6u" secondAttribute="trailing" constant="21" id="c8L-N7-dTB"/>
-                                                <constraint firstItem="60Y-nO-Qha" firstAttribute="width" secondItem="NUT-qu-xrH" secondAttribute="width" multiplier="0.625604" id="gGE-Gi-WnN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zGo-C3-WGR" secondAttribute="bottom" constant="15" id="qBz-K7-EFW"/>
-                                                <constraint firstItem="zGo-C3-WGR" firstAttribute="width" secondItem="NUT-qu-xrH" secondAttribute="width" multiplier="0.555556" id="yxh-RJ-Hnh"/>
+                                                <constraint firstItem="Q03-FF-CfD" firstAttribute="centerY" secondItem="NUT-qu-xrH" secondAttribute="centerY" id="9VJ-mm-N5r"/>
+                                                <constraint firstItem="Q03-FF-CfD" firstAttribute="width" secondItem="NUT-qu-xrH" secondAttribute="width" multiplier="0.294686" id="EjG-QY-H6T"/>
+                                                <constraint firstItem="hoi-1N-Wlv" firstAttribute="leading" secondItem="Q03-FF-CfD" secondAttribute="trailing" constant="22" id="NyB-Og-FCN"/>
+                                                <constraint firstItem="Q03-FF-CfD" firstAttribute="leading" secondItem="NUT-qu-xrH" secondAttribute="leading" constant="20" id="RsL-RY-6j5"/>
+                                                <constraint firstItem="Uu7-e7-irC" firstAttribute="leading" secondItem="Q03-FF-CfD" secondAttribute="trailing" constant="22" id="aFy-qy-IOs"/>
+                                                <constraint firstItem="hoi-1N-Wlv" firstAttribute="top" secondItem="NUT-qu-xrH" secondAttribute="top" constant="36" id="eIQ-A7-Wey"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uu7-e7-irC" secondAttribute="bottom" constant="36" id="g2N-f2-eic"/>
+                                                <constraint firstItem="Uu7-e7-irC" firstAttribute="top" secondItem="hoi-1N-Wlv" secondAttribute="bottom" constant="1" id="how-3F-3kI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uu7-e7-irC" secondAttribute="trailing" constant="20" id="rvM-Ih-Bb6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="articleExtraLbl" destination="60Y-nO-Qha" id="nlo-ie-feX"/>
-                                            <outlet property="articleImgView" destination="gar-Gm-p6u" id="Gd1-Hl-J0f"/>
-                                            <outlet property="articleTitleTxt" destination="zGo-C3-WGR" id="a6x-aK-nHt"/>
+                                            <outlet property="articleExtraLbl" destination="hoi-1N-Wlv" id="sXy-4E-C9c"/>
+                                            <outlet property="articleImgView" destination="Q03-FF-CfD" id="Bns-ce-zus"/>
+                                            <outlet property="articleTitleTxt" destination="Uu7-e7-irC" id="N0S-Lj-K0k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -263,6 +272,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" selectedImage="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="YXQ-Or-B99" id="nJV-pe-Atz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

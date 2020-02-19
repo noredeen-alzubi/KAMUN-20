@@ -11,11 +11,13 @@ import UIKit
 class ArticlesTableViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var articleImgView: UIImageView!
     @IBOutlet weak var articleExtraLbl: UILabel!
-    @IBOutlet weak var articleTitleTxt: UITextView!
     
-
+    @IBOutlet weak var articleTitleTxt: UILabel!
+    
+    
+    @IBOutlet weak var articleImgView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
