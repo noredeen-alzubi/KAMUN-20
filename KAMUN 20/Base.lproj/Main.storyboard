@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7y-XC-Uro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2579.7101449275365" y="-333.48214285714283"/>
+            <point key="canvasLocation" x="2580" y="-320"/>
         </scene>
         <!--Articles View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -281,11 +281,106 @@
                     <navigationItem key="navigationItem" id="x95-94-yxD"/>
                     <connections>
                         <outlet property="tableView" destination="YXQ-Or-B99" id="nJV-pe-Atz"/>
+                        <segue destination="ZlP-D9-6q5" kind="show" id="pN7-bu-wNy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="359.59821428571428"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="5Jb-j3-vi2">
+            <objects>
+                <viewController id="ZlP-D9-6q5" customClass="ArticleDetailViewController" customModule="KAMUN_20" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnj-Sf-Uyh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc3-tT-9Gc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-Hd-lRp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-1x-JQU">
+                                                <rect key="frame" x="55" y="23" width="304" height="199"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYB-Rn-Vya">
+                                                <rect key="frame" x="33" y="249" width="164" height="21"/>
+                                                <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="21"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bih-0E-dci">
+                                                <rect key="frame" x="33" y="326" width="348" height="27"/>
+                                                <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7S-pb-pka">
+                                                <rect key="frame" x="33" y="285" width="99" height="21"/>
+                                                <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="21"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-zk-LcZ">
+                                                <rect key="frame" x="30" y="379" width="354" height="326"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZYB-Rn-Vya" firstAttribute="leading" secondItem="WCw-Hd-lRp" secondAttribute="leading" constant="33" id="2Xf-fK-Da0"/>
+                                            <constraint firstItem="bih-0E-dci" firstAttribute="top" secondItem="f7S-pb-pka" secondAttribute="bottom" constant="20" id="6bx-j7-GPo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xga-1x-JQU" secondAttribute="trailing" constant="55" id="8PH-tw-bpd"/>
+                                            <constraint firstAttribute="trailing" secondItem="bih-0E-dci" secondAttribute="trailing" constant="33" id="9Gf-71-bUs"/>
+                                            <constraint firstAttribute="trailing" secondItem="rBL-zk-LcZ" secondAttribute="trailing" constant="30" id="9pk-0u-2j8"/>
+                                            <constraint firstItem="rBL-zk-LcZ" firstAttribute="top" secondItem="bih-0E-dci" secondAttribute="bottom" constant="26" id="IpJ-7c-WVN"/>
+                                            <constraint firstItem="Xga-1x-JQU" firstAttribute="leading" secondItem="WCw-Hd-lRp" secondAttribute="leading" constant="55" id="Mtz-AE-ULX"/>
+                                            <constraint firstItem="Xga-1x-JQU" firstAttribute="height" secondItem="WCw-Hd-lRp" secondAttribute="height" multiplier="0.274483" id="SQx-VP-u0b"/>
+                                            <constraint firstItem="bih-0E-dci" firstAttribute="leading" secondItem="ZYB-Rn-Vya" secondAttribute="leading" id="Udt-aa-7xA"/>
+                                            <constraint firstItem="f7S-pb-pka" firstAttribute="leading" secondItem="ZYB-Rn-Vya" secondAttribute="leading" id="afF-40-JVI"/>
+                                            <constraint firstItem="rBL-zk-LcZ" firstAttribute="leading" secondItem="WCw-Hd-lRp" secondAttribute="leading" constant="30" id="bNt-sY-kPj"/>
+                                            <constraint firstItem="ZYB-Rn-Vya" firstAttribute="top" secondItem="Xga-1x-JQU" secondAttribute="bottom" constant="27" id="k4Z-NY-wjD"/>
+                                            <constraint firstItem="Xga-1x-JQU" firstAttribute="top" secondItem="WCw-Hd-lRp" secondAttribute="top" constant="23" id="nhu-Wk-0wV"/>
+                                            <constraint firstAttribute="bottom" secondItem="rBL-zk-LcZ" secondAttribute="bottom" constant="20" id="qL2-Ug-1ml"/>
+                                            <constraint firstItem="f7S-pb-pka" firstAttribute="top" secondItem="ZYB-Rn-Vya" secondAttribute="bottom" constant="15" id="qjo-f5-xbi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WCw-Hd-lRp" firstAttribute="leading" secondItem="t7q-kZ-MBN" secondAttribute="leading" id="euu-UX-FAW"/>
+                                    <constraint firstItem="t7q-kZ-MBN" firstAttribute="bottom" secondItem="WCw-Hd-lRp" secondAttribute="bottom" id="f1b-4D-aGA"/>
+                                    <constraint firstItem="t7q-kZ-MBN" firstAttribute="trailing" secondItem="WCw-Hd-lRp" secondAttribute="trailing" id="jKQ-57-8mY"/>
+                                    <constraint firstItem="WCw-Hd-lRp" firstAttribute="top" secondItem="t7q-kZ-MBN" secondAttribute="top" id="ylH-nx-Aaz"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jwh-bN-gmf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="t7q-kZ-MBN"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="leading" secondItem="PsE-V4-5qq" secondAttribute="leading" id="d3x-3v-yec"/>
+                            <constraint firstItem="PsE-V4-5qq" firstAttribute="bottom" secondItem="Yc3-tT-9Gc" secondAttribute="bottom" id="ezd-ye-adt"/>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="top" secondItem="PsE-V4-5qq" secondAttribute="top" id="mgi-Wy-tQz"/>
+                            <constraint firstItem="PsE-V4-5qq" firstAttribute="trailing" secondItem="Yc3-tT-9Gc" secondAttribute="trailing" id="zEC-EW-bCQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PsE-V4-5qq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dta-lf-Cpe"/>
+                    <connections>
+                        <outlet property="articleAuthor" destination="ZYB-Rn-Vya" id="X1X-99-Gd2"/>
+                        <outlet property="articleBody" destination="rBL-zk-LcZ" id="sM4-pc-dM4"/>
+                        <outlet property="articleDate" destination="f7S-pb-pka" id="SQI-ko-psO"/>
+                        <outlet property="articleImg" destination="Xga-1x-JQU" id="41y-OJ-bPz"/>
+                        <outlet property="articleTitle" destination="bih-0E-dci" id="btu-Oe-72a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLN-Wo-OR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579.7101449275365" y="381.69642857142856"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="vG2-Ra-GnW">
@@ -301,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u93-Ha-Uxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679.7101449275365" y="457.36607142857139"/>
+            <point key="canvasLocation" x="3468" y="-320"/>
         </scene>
         <!--Locations-->
         <scene sceneID="scg-nF-5X1">
@@ -380,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-gC-hNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3560.8695652173915" y="456.69642857142856"/>
+            <point key="canvasLocation" x="3800" y="402"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -432,6 +527,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TOS-uV-bXh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

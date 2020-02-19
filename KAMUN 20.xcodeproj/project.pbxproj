@@ -42,6 +42,7 @@
 		0B60BB9423F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */; };
 		0B60BB9A23F476D700BA4EF5 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BB9923F476D700BA4EF5 /* ScheduleViewController.swift */; };
 		0B60BB9C23F4773000BA4EF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BB9B23F4773000BA4EF5 /* MapViewController.swift */; };
+		0B95FCA223FDBBB50065AE63 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95FCA123FDBBB50065AE63 /* ArticleDetailViewController.swift */; };
 		53B5820CD2794C50021804A6 /* libPods-KAMUN 20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF0AF58458BE20DBB85C628 /* libPods-KAMUN 20.a */; };
 		9E581EE41B2CA842519FC996 /* libPods-KAMUN 20Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A7C5162C119F9B16B759EC /* libPods-KAMUN 20Tests.a */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B60BB9923F476D700BA4EF5 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		0B60BB9B23F4773000BA4EF5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0B95FCA123FDBBB50065AE63 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		13A7C5162C119F9B16B759EC /* libPods-KAMUN 20Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KAMUN 20Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A50843DAB903AEF06E970A /* Pods-KAMUN 20Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAMUN 20Tests.debug.xcconfig"; path = "Target Support Files/Pods-KAMUN 20Tests/Pods-KAMUN 20Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		66405AB292D5362740516278 /* libPods-KAMUN 20-KAMUN 20UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KAMUN 20-KAMUN 20UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 		0B31F94123EF4D32007E8E99 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B95FCA123FDBBB50065AE63 /* ArticleDetailViewController.swift */,
 				0B31F96123F083A2007E8E99 /* DashboardViewController.swift */,
 				0B60BB9923F476D700BA4EF5 /* ScheduleViewController.swift */,
 				0B60BB9B23F4773000BA4EF5 /* MapViewController.swift */,
@@ -542,6 +545,7 @@
 				0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */,
 				0B497CD923F835B3001FECC1 /* LocationsViewController.swift in Sources */,
 				0B497CDC23F83994001FECC1 /* Location.swift in Sources */,
+				0B95FCA223FDBBB50065AE63 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

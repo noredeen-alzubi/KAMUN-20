@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
+import CoreLocation
 
 var locationsOnMap = [
     "King Hussein bin Talal Humanities Wing": [31.751899,35.848381],
@@ -40,10 +42,19 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     var destinations = [ScheduleViewController(), MapViewController()]
     
+    let weather_key = "dcb1fae3f28fcf9637702ab46ba595a6"
+    
+    let lat = 31.752529
+    let long = 35.846844
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AF.request("api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid={\(weather_key)").responseJSON {
+            response in
+            
+        }
         
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
