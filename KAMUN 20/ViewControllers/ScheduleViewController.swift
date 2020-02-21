@@ -10,14 +10,25 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 49
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
-        // Do any additional setup after loading the view.
     }
     
 

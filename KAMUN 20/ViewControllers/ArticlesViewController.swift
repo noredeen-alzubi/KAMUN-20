@@ -33,6 +33,47 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
         return UITableView.automaticDimension
     }
     
+    var selectedIndex: Int = 0
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        self.performSegue(withIdentifier: "showDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let detailViewCont : ArticleDetailViewController = segue.destination as? ArticleDetailViewController {
+            
+            detailViewCont.text_ = articles[selectedIndex].text
+            detailViewCont.title_ = articles[selectedIndex].title
+            detailViewCont.date_ = articles[selectedIndex].time
+            detailViewCont.author_ = articles[selectedIndex].author
+            detailViewCont.url_ = articles[selectedIndex].imageURL
+            
+//            let sd: SDWebImageManager = SDWebImageManager()
+//            detailViewCont.image_ = sd.loadImage(with: URL(string: articles[selectedIndex].imageURL), options: .continueInBackground, progress: <#T##SDImageLoaderProgressBlock?##SDImageLoaderProgressBlock?##(Int, Int, URL?) -> Void#>, completed: { (image, data, error, cache, b, url) in
+//
+//            })
+            
+            
+            SDWebImageManager.shared.loadImage(with: URL(string: articles[selectedIndex].imageURL), options: .continueInBackground, progress: { (n1, n2, n3) in
+                
+            }, completed: { (image, data, error, cache, b, url) in
+                detailViewCont.loadedImage = true
+                if let img = image{
+                    print("success")
+                    detailViewCont.image_ = img
+                }
+                
+            })
+            
+            
+            
+        }
+        
+        
+
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,6 +95,15 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
         
         setUpConnections()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func setUpConnections(){

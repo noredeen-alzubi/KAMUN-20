@@ -162,14 +162,65 @@
                     <view key="view" contentMode="scaleToFill" id="Od1-Rn-A0e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-Lf-rjc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="834-Dd-UDE" customClass="ScheduleTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="834-Dd-UDE" id="Zyj-hh-vSo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJ5-fg-fb9">
+                                                    <rect key="frame" x="15" y="18.5" width="47" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" red="0.77625457314670387" green="0.65573487684350329" blue="0.23250131380435504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-4O-d5V">
+                                                    <rect key="frame" x="92" y="19" width="273" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jJ5-fg-fb9" firstAttribute="centerY" secondItem="Zyj-hh-vSo" secondAttribute="centerY" id="22x-qX-m3I"/>
+                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="width" secondItem="Zyj-hh-vSo" secondAttribute="width" multiplier="0.65942" id="6KQ-MB-bfN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bx1-4O-d5V" secondAttribute="bottom" constant="19" id="8PV-22-KME"/>
+                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="leading" secondItem="jJ5-fg-fb9" secondAttribute="trailing" constant="30" id="Rw5-vu-zYm"/>
+                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="top" secondItem="Zyj-hh-vSo" secondAttribute="top" constant="19" id="ef5-XP-Y1w"/>
+                                                <constraint firstItem="jJ5-fg-fb9" firstAttribute="leading" secondItem="Zyj-hh-vSo" secondAttribute="leading" constant="15" id="wK3-t9-IpS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventLbl" destination="Bx1-4O-d5V" id="eKc-Dt-Quv"/>
+                                            <outlet property="timeLbl" destination="jJ5-fg-fb9" id="SGm-9g-bU8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AZK-Lf-rjc" firstAttribute="leading" secondItem="JX3-DN-l4v" secondAttribute="leading" id="9Yg-MN-qZK"/>
+                            <constraint firstItem="JX3-DN-l4v" firstAttribute="bottom" secondItem="AZK-Lf-rjc" secondAttribute="bottom" id="VMf-MV-0y6"/>
+                            <constraint firstItem="JX3-DN-l4v" firstAttribute="trailing" secondItem="AZK-Lf-rjc" secondAttribute="trailing" id="cOm-Md-ZDW"/>
+                            <constraint firstItem="AZK-Lf-rjc" firstAttribute="top" secondItem="JX3-DN-l4v" secondAttribute="top" id="tLd-oo-iNF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JX3-DN-l4v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="asi-P9-hYx"/>
+                    <connections>
+                        <outlet property="tableView" destination="AZK-Lf-rjc" id="px4-NR-ww8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7y-XC-Uro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="-320"/>
+            <point key="canvasLocation" x="2579.7101449275365" y="-320.08928571428572"/>
         </scene>
         <!--Articles View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -281,7 +332,7 @@
                     <navigationItem key="navigationItem" id="x95-94-yxD"/>
                     <connections>
                         <outlet property="tableView" destination="YXQ-Or-B99" id="nJV-pe-Atz"/>
-                        <segue destination="ZlP-D9-6q5" kind="show" id="pN7-bu-wNy"/>
+                        <segue destination="ZlP-D9-6q5" kind="show" identifier="showDetail" id="pN7-bu-wNy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -296,10 +347,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc3-tT-9Gc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc3-tT-9Gc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-Hd-lRp">
+                                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-Hd-lRp" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-1x-JQU">
@@ -309,25 +360,25 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYB-Rn-Vya">
-                                                <rect key="frame" x="33" y="249" width="164" height="21"/>
+                                                <rect key="frame" x="33" y="249" width="172" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="21"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bih-0E-dci">
-                                                <rect key="frame" x="33" y="326" width="348" height="27"/>
+                                                <rect key="frame" x="33" y="333" width="348" height="31.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7S-pb-pka">
-                                                <rect key="frame" x="33" y="285" width="99" height="21"/>
+                                                <rect key="frame" x="33" y="288.5" width="107.5" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="21"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-zk-LcZ">
-                                                <rect key="frame" x="30" y="379" width="354" height="326"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-zk-LcZ">
+                                                <rect key="frame" x="30" y="390.5" width="354" height="314.5"/>
                                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
@@ -365,10 +416,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="leading" secondItem="PsE-V4-5qq" secondAttribute="leading" id="d3x-3v-yec"/>
-                            <constraint firstItem="PsE-V4-5qq" firstAttribute="bottom" secondItem="Yc3-tT-9Gc" secondAttribute="bottom" id="ezd-ye-adt"/>
-                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="top" secondItem="PsE-V4-5qq" secondAttribute="top" id="mgi-Wy-tQz"/>
-                            <constraint firstItem="PsE-V4-5qq" firstAttribute="trailing" secondItem="Yc3-tT-9Gc" secondAttribute="trailing" id="zEC-EW-bCQ"/>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="centerX" secondItem="cnj-Sf-Uyh" secondAttribute="centerX" id="E5T-L2-gfQ"/>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="width" secondItem="cnj-Sf-Uyh" secondAttribute="width" id="TNq-Cc-cx7"/>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="height" secondItem="cnj-Sf-Uyh" secondAttribute="height" multiplier="0.809152" id="jCx-IW-MUv"/>
+                            <constraint firstItem="Yc3-tT-9Gc" firstAttribute="centerY" secondItem="cnj-Sf-Uyh" secondAttribute="centerY" id="pGe-CZ-fN3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PsE-V4-5qq"/>
                     </view>
@@ -555,6 +606,6 @@
         <image name="small-logo" width="179" height="181"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Sks-am-hEE"/>
+        <segue reference="3iH-wB-gWs"/>
     </inferredMetricsTieBreakers>
 </document>
