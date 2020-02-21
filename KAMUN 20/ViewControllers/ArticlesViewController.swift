@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ArticlesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,9 +22,10 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ArticlesTableViewCell
         let eachArticle = articles[indexPath.row]
-        cell?.articleExtraLbl.text = eachArticle.author
-        cell?.articleImgView.image = eachArticle.image.image
-        cell?.articleTitleTxt.text = eachArticle.title
+//        cell?.articleExtraLbl.text = eachArticle.author
+//        cell?.articleImgView.image = eachArticle.image.image
+//        cell?.articleTitleTxt.text = eachArticle.title
+        cell?.updateContent(article: eachArticle)
         return cell!
     }
     
@@ -46,16 +48,28 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.navigationController?.isNavigationBarHidden = true
         
-        //testing
-        articles.append(Article(title: "BREAKING NEWS: Delegates start war in HCC. BREAKING NEWS:w", author: "Abook Al-Zu'bi", text: "awdwadwadawda", image: UIImage(named: "ip")!))
-        //testing
-        
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 259
         
-       
+        setUpConnections()
+        
     }
+    
+    func setUpConnections(){
+           Database.database().reference().child("articles").observe(.childAdded, with: { snapshot in
+               
+               let dictArticle = snapshot.value as? [String:AnyObject] ?? [:]
+               
+              
+               print(snapshot.key)
+               self.articles.insert(Article(dictionary: dictArticle, id: snapshot.key), at: 0)
+               self.tableView.separatorColor = UITableView().separatorColor
+               self.tableView.reloadData()
+               
+           })
+           
+       }
     
 
     /*

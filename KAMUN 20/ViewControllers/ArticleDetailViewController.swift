@@ -16,6 +16,8 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleBody: UITextView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,9 @@ class ArticleDetailViewController: UIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         
     }
+    
+    
+   
     
 
     /*
