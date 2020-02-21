@@ -5,7 +5,7 @@
 //  Created by Noredeen AL-Zu'bi on 2/9/20.
 //  Copyright © 2020 Bashar Al-Zu'bi. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -37,6 +37,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var weatherImgView: UIImageView!
+    @IBOutlet weak var tempLbl: UILabel!
     
     var iconArray = [UIImage(named:"schedule"), UIImage(named:"map"), UIImage(named:"locations")]
     
@@ -51,10 +53,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AF.request("api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid={\(weather_key)").responseJSON {
-            response in
-            
-        }
         
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -68,8 +66,28 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        
+        AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weather_key)").responseJSON {
+            response in
+            if let responseStr = response.value{
+                 print(responseStr)
+                let JSONResponse = JSON(responseStr)
+                let JSONWeather = JSONResponse["weather"].array![0]
+                let JSONTemp = JSONResponse["main"]
+                let iconName = JSONWeather["icon"].stringValue
+                
+                //setters
+                self.weatherImgView.image = UIImage(named: iconName)
+                self.tempLbl.text = "\(Int(round(JSONTemp["temp"].doubleValue - 273.15)))"
+                
+                
+            }
+        }
+        
     }
     
     
