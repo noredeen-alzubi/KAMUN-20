@@ -34,7 +34,17 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return pickerData[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = view as? UILabel ?? UILabel()
+        label.font = UIFont.init(name: "Open Sans", size: 25)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.text = pickerData[row]
+        return label
+    }
     
+    
+    @IBOutlet weak var btnLoc: UIButton!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var btnMap: UIButton!
     @IBOutlet weak var mainLocText: UILabel!
@@ -46,19 +56,44 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func btnLocClicked(_ sender: Any) {
         
         btnMap.isEnabled = false
-        let location = locations[indexOf(forum: self.pickerData[self.picker.selectedRow(inComponent: 0)])]
-        self.mainLocText.text = location.room + " - " + location.building
-        self.selectedLoc = location.building
-        //enable button
-        self.btnMap.isEnabled = true
+        
+        if (locations.count == 0){
+            
+            let alert = UIAlertController(title: "Network Error", message: "We're having trouble loading the locations data.", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "Ok",
+                style: .default,
+                handler: nil) //You can use a block here to handle a press on this button
+
+            alert.addAction(actionOk)
+            self.present(alert, animated: true)
+            
+        }else{
+            
+            let location = locations[indexOf(forum: self.pickerData[self.picker.selectedRow(inComponent: 0)])]
+            self.mainLocText.text = location.room + " - " + location.building
+            self.selectedLoc = location.building
+            //enable button
+            self.btnMap.isEnabled = true
+            self.btnMap.isHidden = false
+        }
+        
+        
         
         
         
     }
     
+    @IBAction func showMapClicked(_ sender: Any) {
+   
+        self.performSegue(withIdentifier: "ShowMapSegue", sender: nil)
+    
+    }
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.btnLoc.backgroundColor = UIColor.lightGray
         self.navigationController?.isNavigationBarHidden = false
                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
                self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -78,7 +113,14 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //let dictArticles = root["articles"] as? [String : AnyObject] ?? [:]
             
             self.locations.insert(Location(forum: snapshot.key, dictionary: dictLocation), at: 0)
-            print("request")
+            
+            if self.locations.count >= 7{
+                //enable function + stop loading
+                self.btnLoc.isEnabled = true
+                self.btnLoc.backgroundColor = UIColor(red: 215/255, green: 255/255, blue: 189/255, alpha: 1)
+            
+            }
+        
         })
         
         
@@ -100,6 +142,17 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
            }
            return -1
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepping")
+        if(segue.identifier == "ShowMapSegue"){
+            
+            let receiverVC = segue.destination as! MapViewController
+            print(selectedLoc)
+            receiverVC.segueLocation = locationsOnMap[selectedLoc]!
+            
+        }
+    }
     
 
     /*

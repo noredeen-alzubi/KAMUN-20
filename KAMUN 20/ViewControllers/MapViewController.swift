@@ -12,6 +12,8 @@ import  GoogleMaps
 class MapViewController: UIViewController {
     
     public var startingLocation: [Double] = [31.752567,35.846952]
+    public var segueLocation: [Double] = []
+    
     
     var locationManager = CLLocationManager()
 
@@ -40,15 +42,21 @@ class MapViewController: UIViewController {
                    marker.title = name
                    marker.map = mapView
                    marker.snippet = name
+                
+                    if(segueLocation.count > 0 && location[0] == segueLocation[0] && location[1] == segueLocation[1]){
+                          mapView.selectedMarker = marker
+                        mapView.animate(to: GMSCameraPosition.camera(withLatitude: location[0], longitude: location[1], zoom: 17.5, bearing: 66, viewingAngle: 0))
+                    }
                    
-                   if startingLocation.count == 2{
-                       
-                       if(location[0] == startingLocation[0] && location[1] == startingLocation[1]){
-                           mapView.selectedMarker = marker
-                       }
-                       
-                   }
+               
                }
+        
+      //  if segueLocation.count > 0 {
+                              
+                              
+                 //          mapView.selectedMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: (locationsOnMap[segueLocation]?[0])!, longitude: (locationsOnMap[segueLocation]?[1])!))
+                              
+               //           }
         
         view = mapView
     }

@@ -304,6 +304,9 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-1x-JQU">
                                                 <rect key="frame" x="55" y="23" width="304" height="199"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="199" id="4pD-fd-9m8"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYB-Rn-Vya">
                                                 <rect key="frame" x="33" y="249" width="164" height="21"/>
@@ -325,7 +328,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-zk-LcZ">
                                                 <rect key="frame" x="30" y="379" width="354" height="326"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -339,7 +342,6 @@
                                             <constraint firstAttribute="trailing" secondItem="rBL-zk-LcZ" secondAttribute="trailing" constant="30" id="9pk-0u-2j8"/>
                                             <constraint firstItem="rBL-zk-LcZ" firstAttribute="top" secondItem="bih-0E-dci" secondAttribute="bottom" constant="26" id="IpJ-7c-WVN"/>
                                             <constraint firstItem="Xga-1x-JQU" firstAttribute="leading" secondItem="WCw-Hd-lRp" secondAttribute="leading" constant="55" id="Mtz-AE-ULX"/>
-                                            <constraint firstItem="Xga-1x-JQU" firstAttribute="height" secondItem="WCw-Hd-lRp" secondAttribute="height" multiplier="0.274483" id="SQx-VP-u0b"/>
                                             <constraint firstItem="bih-0E-dci" firstAttribute="leading" secondItem="ZYB-Rn-Vya" secondAttribute="leading" id="Udt-aa-7xA"/>
                                             <constraint firstItem="f7S-pb-pka" firstAttribute="leading" secondItem="ZYB-Rn-Vya" secondAttribute="leading" id="afF-40-JVI"/>
                                             <constraint firstItem="rBL-zk-LcZ" firstAttribute="leading" secondItem="WCw-Hd-lRp" secondAttribute="leading" constant="30" id="bNt-sY-kPj"/>
@@ -351,6 +353,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="WCw-Hd-lRp" firstAttribute="width" secondItem="t7q-kZ-MBN" secondAttribute="width" id="DYO-PR-C1n"/>
                                     <constraint firstItem="WCw-Hd-lRp" firstAttribute="leading" secondItem="t7q-kZ-MBN" secondAttribute="leading" id="euu-UX-FAW"/>
                                     <constraint firstItem="t7q-kZ-MBN" firstAttribute="bottom" secondItem="WCw-Hd-lRp" secondAttribute="bottom" id="f1b-4D-aGA"/>
                                     <constraint firstItem="t7q-kZ-MBN" firstAttribute="trailing" secondItem="WCw-Hd-lRp" secondAttribute="trailing" id="jKQ-57-8mY"/>
@@ -407,22 +410,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koe-Cz-91z">
-                                <rect key="frame" x="0.0" y="152" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="155.5" width="414" height="269"/>
                                 <connections>
                                     <outlet property="dataSource" destination="izy-fj-Lbg" id="Sbw-QU-1id"/>
                                     <outlet property="delegate" destination="izy-fj-Lbg" id="bEh-vK-eg6"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Forum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGB-Sc-REH">
-                                <rect key="frame" x="153.5" y="124" width="107" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="153" y="124" width="108" height="23.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-4F-0F8">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-4F-0F8">
                                 <rect key="frame" x="124" y="416" width="167" height="55"/>
-                                <color key="backgroundColor" red="0.84290616455180578" green="1" blue="0.74085465558237351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.84313725490196079" green="1" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
                                 <state key="normal" title="Find Location">
                                     <color key="titleColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -432,18 +436,21 @@
                                     <action selector="btnLocClicked:" destination="izy-fj-Lbg" eventType="touchUpInside" id="4vl-K8-uoc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtZ-aO-xXs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtZ-aO-xXs">
                                 <rect key="frame" x="69.5" y="491" width="275" height="20.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-F1-WXR">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-F1-WXR">
                                 <rect key="frame" x="139" y="534" width="136" height="30"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Show on Map &gt;">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showMapClicked:" destination="izy-fj-Lbg" eventType="touchUpInside" id="HQz-Bf-GGO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -468,9 +475,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="LXQ-mu-Nan"/>
                     <connections>
+                        <outlet property="btnLoc" destination="7V3-4F-0F8" id="5SA-Fo-FrV"/>
                         <outlet property="btnMap" destination="AJp-F1-WXR" id="JTD-1K-hip"/>
                         <outlet property="mainLocText" destination="RtZ-aO-xXs" id="Y9C-6C-USH"/>
                         <outlet property="picker" destination="koe-Cz-91z" id="rbf-fv-CpD"/>
+                        <segue destination="IBa-Zz-bld" kind="show" identifier="ShowMapSegue" id="Sks-am-hEE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-gC-hNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -545,4 +554,7 @@
         <image name="second" width="30" height="30"/>
         <image name="small-logo" width="179" height="181"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sks-am-hEE"/>
+    </inferredMetricsTieBreakers>
 </document>
