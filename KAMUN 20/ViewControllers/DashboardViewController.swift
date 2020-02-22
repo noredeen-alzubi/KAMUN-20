@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
-import CoreLocation
+import NVActivityIndicatorView
 
 var locationsOnMap = [
     "King Hussein bin Talal Humanities Wing": [31.751899,35.848381],
@@ -39,6 +39,9 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var weatherImgView: UIImageView!
     @IBOutlet weak var tempLbl: UILabel!
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
+    
+    
     
     var iconArray = [UIImage(named:"schedule"), UIImage(named:"map"), UIImage(named:"locations")]
     
@@ -53,7 +56,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.loadingView.startAnimating()
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -73,14 +76,16 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weather_key)").responseJSON {
             response in
+            print(response.result)
             if let responseStr = response.value{
-                 print(responseStr)
+                 //print(responseStr)
                 let JSONResponse = JSON(responseStr)
                 let JSONWeather = JSONResponse["weather"].array![0]
                 let JSONTemp = JSONResponse["main"]
                 let iconName = JSONWeather["icon"].stringValue
                 
                 //setters
+                self.loadingView.stopAnimating()
                 self.weatherImgView.image = UIImage(named: iconName)
                 self.tempLbl.text = "\(Int(round(JSONTemp["temp"].doubleValue - 273.15)))"
                 

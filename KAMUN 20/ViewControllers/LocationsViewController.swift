@@ -111,7 +111,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         
-        pickerData = ["Security Council", "Disarmament Commission", "Human Rights Council", "General Assembly 1", "General Assembly 2", "Economic and Financial Council", "Environmental and Social Council", "World Health Organization", "International Court of Justice", "International Criminal Court", "Historical Criminal Court", "United States Congress", "East Asia Summit", "Crisis Team", "Arab League"]
+        pickerData = ["Security Council", "International Press", "Human Rights Council", "General Assembly 1", "General Assembly 2", "Economic and Financial Council", "Environmental and Social Council", "World Health Organization", "International Court of Justice", "International Criminal Court", "Historical Criminal Court", "United Nations CSTD", "East Asia Summit", "Crisis Team", "Arab League", "International Civil Aviation Org", "International Atomic Energy Agency"]
         
         ref = Database.database().reference().child("locations")
         

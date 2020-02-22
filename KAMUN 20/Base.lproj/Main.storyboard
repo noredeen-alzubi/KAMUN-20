@@ -106,17 +106,7 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="s01-s9-iOQ"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rb2-R8-mej">
-                                <rect key="frame" x="0.0" y="575.5" width="414" height="237.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-Lr-l5s">
-                                <rect key="frame" x="15" y="532.5" width="222.5" height="32"/>
-                                <fontDescription key="fontDescription" name="ACaslonPro-Bold" family="Adobe Caslon Pro" pointSize="32"/>
-                                <color key="textColor" red="0.46089220050000002" green="0.056367874149999997" blue="0.79239362479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02d" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-j5-x8Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-j5-x8Y">
                                 <rect key="frame" x="281" y="116" width="63" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JDe-j5-x8Y" secondAttribute="height" multiplier="1:1" id="uDA-vc-LZq"/>
@@ -136,16 +126,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGr-cv-Afm">
-                                <rect key="frame" x="286" y="182" width="53" height="28"/>
+                                <rect key="frame" x="294" y="182" width="37.5" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="vmc-il-Qn5">
-                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="vmc-il-Qn5">
+                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBO-zd-4Dw">
-                                        <rect key="frame" x="30" y="2" width="19" height="20"/>
+                                        <rect key="frame" x="14.5" y="2" width="19" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,40 +150,61 @@
                                     <constraint firstItem="VBO-zd-4Dw" firstAttribute="leading" secondItem="vmc-il-Qn5" secondAttribute="trailing" constant="2" id="lWX-xf-Bv3"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDF-4z-G5I" userLabel="Loading View" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="292" y="127" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pDF-4z-G5I" secondAttribute="height" multiplier="1:1" id="QkU-s2-51W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballSpinFadeLoader"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lr-fx-Qjt">
+                                <rect key="frame" x="244" y="606" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="first-1"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delegate of The Session" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-Lr-l5s">
+                                <rect key="frame" x="42" y="558" width="152" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ACaslonPro-Bold" family="Adobe Caslon Pro" pointSize="28"/>
+                                <color key="textColor" red="0.46089220050000002" green="0.056367874149999997" blue="0.79239362479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4CD-Lr-l5s" firstAttribute="top" secondItem="HTT-XD-ABL" secondAttribute="bottom" constant="30" id="2ev-Do-aRO"/>
-                            <constraint firstItem="Rb2-R8-mej" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="3ac-hw-Ujq"/>
                             <constraint firstItem="jF9-yK-7Ja" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="7qQ-7O-feT"/>
                             <constraint firstItem="cGr-cv-Afm" firstAttribute="centerX" secondItem="JDe-j5-x8Y" secondAttribute="centerX" id="BIG-zm-Lk1"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="JDe-j5-x8Y" secondAttribute="trailing" constant="70" id="I1f-VG-iSc"/>
                             <constraint firstItem="cGr-cv-Afm" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.03125" id="IDy-vF-2Qc"/>
+                            <constraint firstItem="pDF-4z-G5I" firstAttribute="centerY" secondItem="JDe-j5-x8Y" secondAttribute="centerY" id="Igv-j6-d6X"/>
                             <constraint firstItem="JDe-j5-x8Y" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="28" id="KdW-8e-bBt"/>
                             <constraint firstItem="iI5-zY-iqo" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.17" id="Pdb-hT-lWL"/>
                             <constraint firstItem="jF9-yK-7Ja" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.5" id="QPi-m5-glP"/>
                             <constraint firstItem="HTT-XD-ABL" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="RcC-OO-GNr"/>
                             <constraint firstItem="0xR-Kj-PK9" firstAttribute="top" secondItem="cGr-cv-Afm" secondAttribute="bottom" constant="-2" id="U3l-QN-OcT"/>
-                            <constraint firstItem="Rb2-R8-mej" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="UzW-1x-qeF"/>
+                            <constraint firstItem="pDF-4z-G5I" firstAttribute="centerX" secondItem="JDe-j5-x8Y" secondAttribute="centerX" id="YPf-QW-gWo"/>
                             <constraint firstItem="JDe-j5-x8Y" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.152174" id="d9O-pu-5pw"/>
                             <constraint firstItem="iI5-zY-iqo" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="5" id="dJ5-0h-OTP"/>
                             <constraint firstItem="iI5-zY-iqo" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="14" id="gxE-Fn-Jsd"/>
-                            <constraint firstItem="4CD-Lr-l5s" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="jBe-nd-SkH"/>
                             <constraint firstItem="HTT-XD-ABL" firstAttribute="top" secondItem="jF9-yK-7Ja" secondAttribute="bottom" constant="24" id="lyi-Uk-Prg"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Rb2-R8-mej" secondAttribute="trailing" id="muK-b7-wNX"/>
+                            <constraint firstItem="pDF-4z-G5I" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.0990338" id="q95-Hr-FuQ"/>
                             <constraint firstItem="cGr-cv-Afm" firstAttribute="top" secondItem="JDe-j5-x8Y" secondAttribute="bottom" constant="3" id="ufx-b2-mtp"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="HTT-XD-ABL" secondAttribute="trailing" id="vLu-XA-eoT"/>
                             <constraint firstItem="jF9-yK-7Ja" firstAttribute="top" secondItem="iI5-zY-iqo" secondAttribute="bottom" constant="15" id="wl2-Vx-ubi"/>
                             <constraint firstItem="0xR-Kj-PK9" firstAttribute="centerX" secondItem="JDe-j5-x8Y" secondAttribute="centerX" id="xgG-PY-fJP"/>
                             <constraint firstItem="HTT-XD-ABL" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.2" id="yCe-4d-QL3"/>
-                            <constraint firstItem="Rb2-R8-mej" firstAttribute="top" secondItem="4CD-Lr-l5s" secondAttribute="bottom" constant="11" id="yN6-K2-vt3"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Rb2-R8-mej" secondAttribute="bottom" id="yn7-Dn-26X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="ieM-bs-rOj"/>
                     <connections>
                         <outlet property="collectionView" destination="HTT-XD-ABL" id="mnD-gC-XkG"/>
+                        <outlet property="loadingView" destination="pDF-4z-G5I" id="BQ9-wB-AGd"/>
                         <outlet property="tempLbl" destination="vmc-il-Qn5" id="KtM-B4-TLQ"/>
                         <outlet property="weatherImgView" destination="JDe-j5-x8Y" id="Yp7-Lv-CVM"/>
                         <segue destination="KFZ-7l-ANt" kind="show" identifier="Segue0" id="Z19-4A-AJ3"/>
@@ -326,7 +337,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-1N-Wlv">
-                                                    <rect key="frame" x="164" y="36" width="133" height="22"/>
+                                                    <rect key="frame" x="164" y="36" width="139" height="22"/>
                                                     <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -417,7 +428,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-w8-UEa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="647.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="677.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="pZI-7Q-g2g">
                                                 <rect key="frame" x="71" y="1" width="272" height="175"/>
@@ -426,25 +437,25 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19/19/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-Gn-TOw">
-                                                <rect key="frame" x="48" y="201" width="318" height="19"/>
+                                                <rect key="frame" x="48" y="201" width="318" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-mb-POV">
-                                                <rect key="frame" x="48" y="227" width="318" height="19"/>
+                                                <rect key="frame" x="48" y="230.5" width="318" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-eF-3Vn">
-                                                <rect key="frame" x="40" y="274" width="334" height="26"/>
+                                                <rect key="frame" x="40" y="281" width="334" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Semibold" family="Adobe Caslon Pro" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-Aj-Hx5">
-                                                <rect key="frame" x="45" y="336" width="324" height="281.5"/>
+                                                <rect key="frame" x="45" y="347.5" width="324" height="300"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
@@ -521,6 +532,21 @@
             </objects>
             <point key="canvasLocation" x="3468" y="-320"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fMP-Gw-4G7">
+            <objects>
+                <viewController id="dsh-Sv-Rpm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPC-pw-RgC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rqc-0j-4Vm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moe-gQ-ALe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4481" y="-325"/>
+        </scene>
         <!--Locations-->
         <scene sceneID="scg-nF-5X1">
             <objects>
@@ -530,14 +556,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koe-Cz-91z">
-                                <rect key="frame" x="0.0" y="155.5" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="269"/>
                                 <connections>
                                     <outlet property="dataSource" destination="izy-fj-Lbg" id="Sbw-QU-1id"/>
                                     <outlet property="delegate" destination="izy-fj-Lbg" id="bEh-vK-eg6"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Forum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGB-Sc-REH">
-                                <rect key="frame" x="153" y="124" width="108" height="23.5"/>
+                                <rect key="frame" x="154" y="124" width="106.5" height="20"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -573,7 +599,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-9A-bm8" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="313.5" y="433" width="47.5" height="47.5"/>
+                                <rect key="frame" x="313.5" y="429.5" width="47.5" height="47.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6y-9A-bm8" secondAttribute="height" multiplier="1:1" id="UCj-Mz-S7h"/>
@@ -686,8 +712,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="02d" width="512" height="512"/>
         <image name="first" width="30" height="30"/>
+        <image name="first-1" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ip" width="2044" height="1360"/>
         <image name="second" width="30" height="30"/>
         <image name="small-logo" width="179" height="181"/>
