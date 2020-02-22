@@ -10,11 +10,14 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
 
+    
     @IBOutlet weak var articleImg: UIImageView!
-    @IBOutlet weak var articleAuthor: UILabel!
     @IBOutlet weak var articleDate: UILabel!
+    @IBOutlet weak var articleAuthor: UILabel!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleBody: UITextView!
+    
+    
     
     var text_: String = String()
     var title_: String = String()
@@ -40,7 +43,7 @@ class ArticleDetailViewController: UIViewController {
         articleTitle.text = title_
         articleDate.text = date_
         articleBody.text = text_
-        
+
         if(loadedImage){
             articleImg.image = image_
         }else{
@@ -48,7 +51,7 @@ class ArticleDetailViewController: UIViewController {
                 UIImage(named: "default-placeholder"), options: [ .continueInBackground],
              completed: { (image: UIImage?, error: Error?, cachetype: SDImageCacheType,
             imageURL: URL?) in
-                
+
                    })
         }
         

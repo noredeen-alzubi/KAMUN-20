@@ -36,7 +36,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = view as? UILabel ?? UILabel()
-        label.font = UIFont.init(name: "Open Sans", size: 25)
+        label.font = UIFont.init(name: "Open Sans", size: 20)
         label.textColor = .black
         label.textAlignment = .center
         label.text = pickerData[row]
