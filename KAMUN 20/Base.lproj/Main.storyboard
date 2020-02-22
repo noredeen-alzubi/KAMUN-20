@@ -365,12 +365,27 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="nXP-0Y-p8N"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-si-Mx0" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="170" y="490" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nnh-si-Mx0" secondAttribute="height" multiplier="1:1" id="ccI-0i-2oT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRipple"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="aLI-0G-SWm" secondAttribute="trailing" id="3FS-lm-4xa"/>
+                            <constraint firstItem="nnh-si-Mx0" firstAttribute="centerY" secondItem="YXQ-Or-B99" secondAttribute="centerY" id="5zI-CE-kFI"/>
+                            <constraint firstItem="nnh-si-Mx0" firstAttribute="centerX" secondItem="YXQ-Or-B99" secondAttribute="centerX" id="8Sq-sM-QiG"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="YXQ-Or-B99" secondAttribute="trailing" id="9Jb-Os-oxd"/>
                             <constraint firstItem="aLI-0G-SWm" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="BTH-g8-TmQ"/>
+                            <constraint firstItem="nnh-si-Mx0" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.178744" id="CUJ-4Y-8gQ"/>
                             <constraint firstItem="YXQ-Or-B99" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="Mt1-eC-Gth"/>
                             <constraint firstItem="aLI-0G-SWm" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Qmx-Hk-SHN"/>
                             <constraint firstItem="aLI-0G-SWm" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.16183" id="UlE-9t-JJk"/>
@@ -381,6 +396,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="x95-94-yxD"/>
                     <connections>
+                        <outlet property="loadingVIew" destination="nnh-si-Mx0" id="Zxh-hM-nMP"/>
                         <outlet property="tableView" destination="YXQ-Or-B99" id="nJV-pe-Atz"/>
                         <segue destination="ZlP-D9-6q5" kind="show" identifier="showDetail" id="pN7-bu-wNy"/>
                     </connections>
@@ -514,14 +530,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koe-Cz-91z">
-                                <rect key="frame" x="0.0" y="152" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="155.5" width="414" height="269"/>
                                 <connections>
                                     <outlet property="dataSource" destination="izy-fj-Lbg" id="Sbw-QU-1id"/>
                                     <outlet property="delegate" destination="izy-fj-Lbg" id="bEh-vK-eg6"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Forum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGB-Sc-REH">
-                                <rect key="frame" x="154" y="124" width="106.5" height="20"/>
+                                <rect key="frame" x="153" y="124" width="108" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -556,6 +572,19 @@
                                     <action selector="showMapClicked:" destination="izy-fj-Lbg" eventType="touchUpInside" id="HQz-Bf-GGO"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-9A-bm8" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="313.5" y="433" width="47.5" height="47.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F6y-9A-bm8" secondAttribute="height" multiplier="1:1" id="UCj-Mz-S7h"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballSpinFadeLoader"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -563,15 +592,18 @@
                             <constraint firstItem="AJp-F1-WXR" firstAttribute="top" secondItem="RtZ-aO-xXs" secondAttribute="bottom" constant="22.5" id="1zs-bA-Nnv"/>
                             <constraint firstItem="7V3-4F-0F8" firstAttribute="width" secondItem="PEW-db-B3V" secondAttribute="width" multiplier="0.403382" id="3Ag-HK-oGY"/>
                             <constraint firstItem="RtZ-aO-xXs" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="5Ht-2t-l2u"/>
+                            <constraint firstItem="F6y-9A-bm8" firstAttribute="leading" secondItem="7V3-4F-0F8" secondAttribute="trailing" constant="23" id="Le9-f9-45E"/>
                             <constraint firstItem="RtZ-aO-xXs" firstAttribute="top" secondItem="7V3-4F-0F8" secondAttribute="bottom" constant="20" id="NZ4-af-OwJ"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="trailing" secondItem="jYF-2f-Axk" secondAttribute="trailing" id="Tnr-Zh-6al"/>
                             <constraint firstItem="7V3-4F-0F8" firstAttribute="top" secondItem="koe-Cz-91z" secondAttribute="bottom" constant="5" id="Xgq-VS-WmI"/>
                             <constraint firstItem="AJp-F1-WXR" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="ahx-2g-d3f"/>
                             <constraint firstItem="uGB-Sc-REH" firstAttribute="top" secondItem="jYF-2f-Axk" secondAttribute="top" constant="36" id="bjm-EH-szw"/>
+                            <constraint firstItem="F6y-9A-bm8" firstAttribute="centerY" secondItem="7V3-4F-0F8" secondAttribute="centerY" id="cAa-Rl-2hS"/>
                             <constraint firstItem="7V3-4F-0F8" firstAttribute="height" secondItem="PEW-db-B3V" secondAttribute="height" multiplier="0.0613839" id="gmX-kj-O6R"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="top" secondItem="uGB-Sc-REH" secondAttribute="bottom" constant="8" id="iJg-m5-949"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="height" secondItem="PEW-db-B3V" secondAttribute="height" multiplier="0.3" id="j1H-kb-uFT"/>
                             <constraint firstItem="koe-Cz-91z" firstAttribute="leading" secondItem="jYF-2f-Axk" secondAttribute="leading" id="mG7-Al-CFU"/>
+                            <constraint firstItem="jYF-2f-Axk" firstAttribute="trailing" secondItem="F6y-9A-bm8" secondAttribute="trailing" constant="53" id="qDJ-9D-P2H"/>
                             <constraint firstItem="uGB-Sc-REH" firstAttribute="centerX" secondItem="PEW-db-B3V" secondAttribute="centerX" id="uAj-op-939"/>
                             <constraint firstItem="RtZ-aO-xXs" firstAttribute="width" secondItem="PEW-db-B3V" secondAttribute="width" multiplier="0.664251" id="v7j-N2-yxL"/>
                         </constraints>
@@ -581,6 +613,7 @@
                     <connections>
                         <outlet property="btnLoc" destination="7V3-4F-0F8" id="5SA-Fo-FrV"/>
                         <outlet property="btnMap" destination="AJp-F1-WXR" id="JTD-1K-hip"/>
+                        <outlet property="loadingView" destination="F6y-9A-bm8" id="vtX-xt-xWn"/>
                         <outlet property="mainLocText" destination="RtZ-aO-xXs" id="Y9C-6C-USH"/>
                         <outlet property="picker" destination="koe-Cz-91z" id="rbf-fv-CpD"/>
                         <segue destination="IBa-Zz-bld" kind="show" identifier="ShowMapSegue" id="Sks-am-hEE"/>
@@ -588,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-gC-hNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3800" y="402"/>
+            <point key="canvasLocation" x="3800.0000000000005" y="401.78571428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

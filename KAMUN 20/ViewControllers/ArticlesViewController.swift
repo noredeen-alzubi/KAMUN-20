@@ -8,8 +8,12 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
 
 class ArticlesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var loadingVIew: NVActivityIndicatorView!
     
     
     var articles: [Article] = [Article]()
@@ -81,7 +85,8 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
          // Do any additional setup after loading the view.
         super.viewDidLoad()
-        
+        self.loadingVIew.startAnimating()
+        self.tableView.separatorStyle = .none
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -116,6 +121,10 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
                self.articles.insert(Article(dictionary: dictArticle, id: snapshot.key), at: 0)
                self.tableView.separatorColor = UITableView().separatorColor
                self.tableView.reloadData()
+            self.loadingVIew.stopAnimating()
+            
+            self.tableView.separatorStyle = .singleLine
+
                
            })
            

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
 
 class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -48,6 +49,10 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var btnMap: UIButton!
     @IBOutlet weak var mainLocText: UILabel!
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
+    
+    
+    
     
     var pickerData: [String] = [String]()
     var locations : [Location] = [Location]()
@@ -93,7 +98,10 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.loadingView.startAnimating()
         self.btnLoc.backgroundColor = UIColor.lightGray
+        self.btnLoc.isEnabled = false
         self.navigationController?.isNavigationBarHidden = false
                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
                self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -117,6 +125,7 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             if self.locations.count >= 7{
                 //enable function + stop loading
                 self.btnLoc.isEnabled = true
+                self.loadingView.stopAnimating()
                 self.btnLoc.backgroundColor = UIColor(red: 215/255, green: 255/255, blue: 189/255, alpha: 1)
             
             }
