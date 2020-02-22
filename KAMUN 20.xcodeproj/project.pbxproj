@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AC25A3BC4C3DC0724D4A8A0 /* libPods-KAMUN 20-KAMUN 20UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66405AB292D5362740516278 /* libPods-KAMUN 20-KAMUN 20UITests.a */; };
+		0B2034B32401873600AD2D1C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2034B22401873600AD2D1C /* CardView.swift */; };
 		0B31F91223EF4D21007E8E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F91123EF4D21007E8E99 /* AppDelegate.swift */; };
 		0B31F91923EF4D21007E8E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F91723EF4D21007E8E99 /* Main.storyboard */; };
 		0B31F91B23EF4D25007E8E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F91A23EF4D25007E8E99 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2034B22401873600AD2D1C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0B31F90E23EF4D21007E8E99 /* KAMUN 20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KAMUN 20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B31F91123EF4D21007E8E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B31F91823EF4D21007E8E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				0B60BB9223F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift */,
 				0B497CE923F85306001FECC1 /* ArticlesTableViewCell.swift */,
 				0B95FCA6240002E70065AE63 /* ScheduleTableViewCell.swift */,
+				0B2034B22401873600AD2D1C /* CardView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				0B497CEC23F85E73001FECC1 /* ArticlesViewController.swift in Sources */,
 				0B497CEE23F85ED2001FECC1 /* Article.swift in Sources */,
 				0B31F91223EF4D21007E8E99 /* AppDelegate.swift in Sources */,
+				0B2034B32401873600AD2D1C /* CardView.swift in Sources */,
 				0B60BB9423F41DDE00BA4EF5 /* DashboardCollectionViewCell.swift in Sources */,
 				0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */,
 				0B497CD923F835B3001FECC1 /* LocationsViewController.swift in Sources */,

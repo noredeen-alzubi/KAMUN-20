@@ -40,6 +40,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var weatherImgView: UIImageView!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var loadingView: NVActivityIndicatorView!
+    @IBOutlet weak var DoSView: UIView!
+    
     
     
     
@@ -54,6 +56,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
    
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.loadingView.startAnimating()
@@ -65,13 +68,53 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         self.navigationController?.isNavigationBarHidden = true
         
         
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func touch(_ sender: UITapGestureRecognizer) {
+        
+        print("touch")
+    }
+    
+    func setupCards(){
+        self.DoSView.layer.cornerRadius = 8
+        self.DoSView.layer.shadowColor = UIColor.black.cgColor
+        self.DoSView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.DoSView.layer.shadowRadius = 5
+        self.DoSView.layer.shadowOpacity = 0.7
+        self.DoSView.backgroundColor = UIColor.clear
+
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.red.cgColor, UIColor.gray.cgColor]
+        gradient.startPoint = CGPoint(x: 1, y: 1)
+        gradient.endPoint = CGPoint(x: 0, y: 0)
+        gradient.locations = [0,1]
+        gradient.frame = self.DoSView.bounds
+        gradient.cornerRadius = 8
+        
+        let c1_light = #colorLiteral(red: 0.9411764741, green: 0.6022757507, blue: 0.1156194169, alpha: 1)
+        let c2_dark = #colorLiteral(red: 0.7725490196, green: 0.007843137255, blue: 0.02352941176, alpha: 1)
+        
+        gradient.colors = [c1_light.cgColor,
+                           c2_dark.cgColor]
+
+       
+        self.DoSView.layer.insertSublayer(gradient, at: 0)
+       
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupCards()
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         
         AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weather_key)").responseJSON {
@@ -159,9 +202,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         return CGSize(width: self.collectionView.frame.height * 0.73, height: self.collectionView.frame.height * 0.73)
     }
     
-    
-    
-    
+
     
 
     /*
