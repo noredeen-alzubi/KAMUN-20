@@ -30,6 +30,7 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
 //        cell?.articleImgView.image = eachArticle.image.image
 //        cell?.articleTitleTxt.text = eachArticle.title
         cell?.updateContent(article: eachArticle)
+        
         return cell!
     }
     
@@ -52,13 +53,6 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
             detailViewCont.date_ = articles[selectedIndex].time
             detailViewCont.author_ = articles[selectedIndex].author
             detailViewCont.url_ = articles[selectedIndex].imageURL
-            
-//            let sd: SDWebImageManager = SDWebImageManager()
-//            detailViewCont.image_ = sd.loadImage(with: URL(string: articles[selectedIndex].imageURL), options: .continueInBackground, progress: <#T##SDImageLoaderProgressBlock?##SDImageLoaderProgressBlock?##(Int, Int, URL?) -> Void#>, completed: { (image, data, error, cache, b, url) in
-//
-//            })
-            
-            
             SDWebImageManager.shared.loadImage(with: URL(string: articles[selectedIndex].imageURL), options: .continueInBackground, progress: { (n1, n2, n3) in
                 
             }, completed: { (image, data, error, cache, b, url) in
@@ -118,8 +112,6 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
                
                let dictArticle = snapshot.value as? [String:AnyObject] ?? [:]
                
-              
-               print(snapshot.key)
                self.articles.insert(Article(dictionary: dictArticle, id: snapshot.key), at: 0)
                self.tableView.separatorColor = UITableView().separatorColor
                self.tableView.reloadData()

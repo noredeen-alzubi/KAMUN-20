@@ -259,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Schedule-->
+        <!--Schedule View Controller-->
         <scene sceneID="pt4-ac-P2A">
             <objects>
                 <viewController id="KFZ-7l-ANt" customClass="ScheduleViewController" customModule="KAMUN_20" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,7 +271,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="834-Dd-UDE" customClass="ScheduleTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSchedule" rowHeight="58" id="834-Dd-UDE" customClass="ScheduleTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="834-Dd-UDE" id="Zyj-hh-vSo">
@@ -306,6 +306,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KFZ-7l-ANt" id="HkA-F6-qdL"/>
+                                    <outlet property="delegate" destination="KFZ-7l-ANt" id="mBI-cq-KW0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -317,8 +321,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JX3-DN-l4v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedule" id="asi-P9-hYx"/>
+                    <navigationItem key="navigationItem" id="asi-P9-hYx">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="uL7-SN-fzu">
+                            <rect key="frame" x="125" y="5.5" width="164" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Day 1"/>
+                                <segment title="Day 2"/>
+                                <segment title="Day 3"/>
+                            </segments>
+                            <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="valChanged:" destination="KFZ-7l-ANt" eventType="valueChanged" id="gu2-UM-dff"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
+                        <outlet property="segmentedControl" destination="uL7-SN-fzu" id="0CJ-3g-Be8"/>
                         <outlet property="tableView" destination="AZK-Lf-rjc" id="px4-NR-ww8"/>
                     </connections>
                 </viewController>

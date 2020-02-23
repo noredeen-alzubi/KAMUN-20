@@ -43,6 +43,9 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        articleImg.layer.cornerRadius = 8
+        articleImg.layer.masksToBounds = true
+        articleImg.clipsToBounds = true
     overrideUserInterfaceStyle = .light
         
         articleAuthor.text = author_
