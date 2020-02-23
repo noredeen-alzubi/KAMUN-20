@@ -15,7 +15,7 @@ class ScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        overrideUserInterfaceStyle = .light
         
         
         tableView.rowHeight = UITableView.automaticDimension

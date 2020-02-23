@@ -94,21 +94,24 @@ class LocationsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+                      self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+                      self.navigationController?.navigationBar.shadowImage = UIImage()
+                      self.navigationController?.navigationBar.isTranslucent = true
+                      self.navigationController?.view.backgroundColor = UIColor.clear
+    }
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         self.loadingView.startAnimating()
         self.btnLoc.backgroundColor = UIColor.lightGray
         self.btnLoc.isEnabled = false
-        self.navigationController?.isNavigationBarHidden = false
-               self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-               self.navigationController?.navigationBar.shadowImage = UIImage()
-               self.navigationController?.navigationBar.isTranslucent = true
-               self.navigationController?.view.backgroundColor = UIColor.clear
-        
-        
         
         
         pickerData = ["Security Council", "International Press", "Human Rights Council", "General Assembly 1", "General Assembly 2", "Economic and Financial Council", "Environmental and Social Council", "World Health Organization", "International Court of Justice", "International Criminal Court", "Historical Criminal Court", "United Nations CSTD", "East Asia Summit", "Crisis Team", "Arab League", "International Civil Aviation Org", "International Atomic Energy Agency"]

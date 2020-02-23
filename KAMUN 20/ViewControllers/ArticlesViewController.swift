@@ -85,6 +85,7 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
          // Do any additional setup after loading the view.
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         self.loadingVIew.startAnimating()
         self.tableView.separatorStyle = .none
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -103,6 +104,7 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true

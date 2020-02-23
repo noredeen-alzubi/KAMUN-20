@@ -43,7 +43,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var DoSView: UIView!
     
     
-    
+        
     
     var iconArray = [UIImage(named:"schedule"), UIImage(named:"map"), UIImage(named:"locations")]
     
@@ -58,7 +58,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        overrideUserInterfaceStyle = .light
         self.loadingView.startAnimating()
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -74,9 +74,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         // Do any additional setup after loading the view.
     }
     
+
+    
     @IBAction func touch(_ sender: UITapGestureRecognizer) {
         
-        print("touch")
+        self.performSegue(withIdentifier: "dos", sender: sender)
     }
     
     func setupCards(){
@@ -115,6 +117,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
         self.navigationController?.isNavigationBarHidden = true
         
         AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(weather_key)").responseJSON {
