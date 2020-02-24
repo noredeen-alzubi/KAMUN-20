@@ -16,7 +16,6 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: NVActivityIndicatorView!
-    @IBOutlet weak var lblNone: UILabel!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,15 +26,12 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DOScell", for: indexPath) as? DOSTableViewCell
         
-        if delegates.count > 0{
+       
             let eachDOS = delegates[indexPath.row]
             cell?.updateContent(delegate: eachDOS)
             cell?.layer.cornerRadius = 8
             cell?.clipsToBounds = true
-        }else{
-            lblNone.isHidden = false;
-        }
-        
+       
         return cell!
     }
     

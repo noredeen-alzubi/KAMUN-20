@@ -27,6 +27,8 @@ class DOSTableViewCell: UITableViewCell {
 //        self.layoutMargins = UIEdgeInsets.zero
 //        self.contentView.layoutMargins.left = 20
         self.mainBackground.layer.cornerRadius = 8
+        delegateImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        delegateImg.sd_imageIndicator = SDWebImageProgressIndicator.`default`
         self.mainBackground.layer.masksToBounds = true
         self.shadowLayer.layer.cornerRadius = 8
         self.shadowLayer.layer.masksToBounds = false

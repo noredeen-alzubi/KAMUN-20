@@ -513,7 +513,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-w8-UEa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="pZI-7Q-g2g">
                                                 <rect key="frame" x="71" y="1" width="272" height="230"/>
@@ -522,25 +522,25 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19/19/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-Gn-TOw">
-                                                <rect key="frame" x="48" y="256" width="318" height="19"/>
+                                                <rect key="frame" x="48" y="260" width="318" height="19"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-mb-POV">
-                                                <rect key="frame" x="48" y="282" width="318" height="19"/>
+                                                <rect key="frame" x="48" y="286" width="318" height="19"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-eF-3Vn">
-                                                <rect key="frame" x="40" y="329" width="334" height="26"/>
+                                                <rect key="frame" x="40" y="333" width="334" height="26"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Semibold" family="Adobe Caslon Pro" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-Aj-Hx5">
-                                                <rect key="frame" x="39" y="391" width="336" height="261"/>
+                                                <rect key="frame" x="39" y="395" width="336" height="261"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
@@ -562,7 +562,7 @@
                                             <constraint firstItem="MZF-Aj-Hx5" firstAttribute="top" secondItem="xnG-eF-3Vn" secondAttribute="bottom" constant="36" id="f7N-vY-Wpe"/>
                                             <constraint firstItem="xnG-eF-3Vn" firstAttribute="top" secondItem="CL5-mb-POV" secondAttribute="bottom" constant="28" id="jF4-0I-K3m"/>
                                             <constraint firstItem="MZF-Aj-Hx5" firstAttribute="leading" secondItem="Rf3-w8-UEa" secondAttribute="leading" constant="39" id="nBL-65-waC"/>
-                                            <constraint firstItem="Jsj-Gn-TOw" firstAttribute="top" secondItem="pZI-7Q-g2g" secondAttribute="bottom" constant="25" id="pHN-tK-qnm"/>
+                                            <constraint firstItem="Jsj-Gn-TOw" firstAttribute="top" secondItem="pZI-7Q-g2g" secondAttribute="bottom" constant="29" id="pHN-tK-qnm"/>
                                             <constraint firstItem="pZI-7Q-g2g" firstAttribute="top" secondItem="Rf3-w8-UEa" secondAttribute="top" constant="1" id="wbz-Ot-5jT"/>
                                             <constraint firstItem="CL5-mb-POV" firstAttribute="leading" secondItem="Rf3-w8-UEa" secondAttribute="leading" constant="48" id="yVt-ac-x2l"/>
                                         </constraints>
@@ -727,31 +727,21 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRipple"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No winners were assigned yet. Stay Tuned!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-iB-SKG">
-                                <rect key="frame" x="43" y="427.5" width="328" height="46.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="trailing" secondItem="Fv6-f7-mOo" secondAttribute="trailing" id="1aZ-aN-Pcn"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="top" secondItem="Rqc-0j-4Vm" secondAttribute="top" id="AWq-7l-P5b"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerX" secondItem="Fv6-f7-mOo" secondAttribute="centerX" id="BWd-UL-jQm"/>
-                            <constraint firstItem="oAe-iB-SKG" firstAttribute="leading" secondItem="Rqc-0j-4Vm" secondAttribute="leading" constant="43" id="FeM-qt-tkU"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerY" secondItem="Fv6-f7-mOo" secondAttribute="centerY" id="IYU-Uz-Mzn"/>
-                            <constraint firstItem="Rqc-0j-4Vm" firstAttribute="trailing" secondItem="oAe-iB-SKG" secondAttribute="trailing" constant="43" id="Tu4-d3-g9M"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="width" secondItem="Fv6-f7-mOo" secondAttribute="width" multiplier="0.178744" id="pzN-Fj-Zlh"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="leading" secondItem="Rqc-0j-4Vm" secondAttribute="leading" id="sGJ-OP-IDr"/>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="bottom" secondItem="Fv6-f7-mOo" secondAttribute="bottom" id="um6-JP-esi"/>
-                            <constraint firstItem="oAe-iB-SKG" firstAttribute="centerY" secondItem="Fv6-f7-mOo" secondAttribute="centerY" id="v1f-X0-fM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rqc-0j-4Vm"/>
                     </view>
                     <navigationItem key="navigationItem" id="XMm-ZB-Fnc"/>
                     <connections>
-                        <outlet property="lblNone" destination="oAe-iB-SKG" id="J1e-jm-RZ6"/>
                         <outlet property="loadingView" destination="WeA-Wy-MwB" id="4kz-uv-dXa"/>
                         <outlet property="tableView" destination="Fv6-f7-mOo" id="c4n-Uh-WaL"/>
                     </connections>
