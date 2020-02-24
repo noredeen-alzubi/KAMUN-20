@@ -16,6 +16,7 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: NVActivityIndicatorView!
+    @IBOutlet weak var lblNone: UILabel!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,10 +26,16 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DOScell", for: indexPath) as? DOSTableViewCell
-        let eachDOS = delegates[indexPath.row]
-        cell?.updateContent(delegate: eachDOS)
-        cell?.layer.cornerRadius = 8
-        cell?.clipsToBounds = true
+        
+        if delegates.count > 0{
+            let eachDOS = delegates[indexPath.row]
+            cell?.updateContent(delegate: eachDOS)
+            cell?.layer.cornerRadius = 8
+            cell?.clipsToBounds = true
+        }else{
+            lblNone.isHidden = false;
+        }
+        
         return cell!
     }
     
@@ -67,6 +74,7 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
                self.navigationController?.navigationBar.isTranslucent = true
                self.navigationController?.view.backgroundColor = UIColor.clear
     }
+
     
     func setUpConnections(){
         Database.database().reference().child("delegates").observe(.childAdded, with: { snapshot in
@@ -74,15 +82,33 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
             let dictDOS = snapshot.value as? [String:AnyObject] ?? [:]
             
            
-            print(snapshot.key)
             self.delegates.insert(DOS(dictionary: dictDOS, id: snapshot.key), at: 0)
             self.tableView.separatorColor = UITableView().separatorColor
+            
+            
             self.tableView.reloadData()
             
          self.loadingView.stopAnimating()
 
+            })
+        
+        Database.database().reference().child("delegates").observe(.childChanged, with: { snapshot in
+            let dictDOS = snapshot.value as? [String:AnyObject] ?? [:]
+            self.delegates[self.indexOf(id: snapshot.key)] = DOS(dictionary: dictDOS, id: snapshot.key)
+            self.tableView.reloadData()
         })
         
+        
+        
+    }
+    
+    func indexOf(id: String) -> Int{
+        for i in 0..<delegates.count{
+            if(delegates[i].id == id){
+                return i;
+            }
+        }
+        return -1
     }
 
     /*

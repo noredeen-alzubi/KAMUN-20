@@ -727,21 +727,31 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRipple"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No winners were assigned yet. Stay Tuned!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-iB-SKG">
+                                <rect key="frame" x="43" y="427.5" width="328" height="46.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="trailing" secondItem="Fv6-f7-mOo" secondAttribute="trailing" id="1aZ-aN-Pcn"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="top" secondItem="Rqc-0j-4Vm" secondAttribute="top" id="AWq-7l-P5b"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerX" secondItem="Fv6-f7-mOo" secondAttribute="centerX" id="BWd-UL-jQm"/>
+                            <constraint firstItem="oAe-iB-SKG" firstAttribute="leading" secondItem="Rqc-0j-4Vm" secondAttribute="leading" constant="43" id="FeM-qt-tkU"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerY" secondItem="Fv6-f7-mOo" secondAttribute="centerY" id="IYU-Uz-Mzn"/>
+                            <constraint firstItem="Rqc-0j-4Vm" firstAttribute="trailing" secondItem="oAe-iB-SKG" secondAttribute="trailing" constant="43" id="Tu4-d3-g9M"/>
                             <constraint firstItem="WeA-Wy-MwB" firstAttribute="width" secondItem="Fv6-f7-mOo" secondAttribute="width" multiplier="0.178744" id="pzN-Fj-Zlh"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="leading" secondItem="Rqc-0j-4Vm" secondAttribute="leading" id="sGJ-OP-IDr"/>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="bottom" secondItem="Fv6-f7-mOo" secondAttribute="bottom" id="um6-JP-esi"/>
+                            <constraint firstItem="oAe-iB-SKG" firstAttribute="centerY" secondItem="Fv6-f7-mOo" secondAttribute="centerY" id="v1f-X0-fM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rqc-0j-4Vm"/>
                     </view>
                     <navigationItem key="navigationItem" id="XMm-ZB-Fnc"/>
                     <connections>
+                        <outlet property="lblNone" destination="oAe-iB-SKG" id="J1e-jm-RZ6"/>
                         <outlet property="loadingView" destination="WeA-Wy-MwB" id="4kz-uv-dXa"/>
                         <outlet property="tableView" destination="Fv6-f7-mOo" id="c4n-Uh-WaL"/>
                     </connections>
