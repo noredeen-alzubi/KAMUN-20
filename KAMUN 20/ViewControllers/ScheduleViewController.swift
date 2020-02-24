@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
+
 class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -15,15 +17,24 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBAction func valChanged(_ sender: Any) {
-        self.tableView.reloadData()
+        
+        if days.count == 3 {
+            self.tableView.reloadData()
+        }
+        
         
     }
+    
+    
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
+    
     
     var days: [[String:AnyObject]] = [[String:AnyObject]]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(segmentedControl.selectedSegmentIndex)
-        if(days.count > 0){
+        print(days.count)
+        if(days.count == 3){
             let daySchedule: [String:AnyObject] = days[segmentedControl.selectedSegmentIndex]
                    return daySchedule.count
         }else{
@@ -55,6 +66,14 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
+        
+        self.loadingView.startAnimating()
+        self.tableView.separatorStyle = .none
+        
         overrideUserInterfaceStyle = .light
         
         
@@ -65,9 +84,11 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
             
             let dictSchedule = snapshot.value as? [String:AnyObject] ?? [:]
             self.days.append(dictSchedule)
-            self.tableView.reloadData()
+            self.loadingView.stopAnimating()
+            
+            self.tableView.separatorStyle = .singleLine
 
-            print("ss")
+            self.tableView.reloadData()
             
         })
         

@@ -267,7 +267,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-Lf-rjc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-Lf-rjc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -279,13 +279,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJ5-fg-fb9">
-                                                    <rect key="frame" x="15" y="18.5" width="47" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <rect key="frame" x="15" y="18.5" width="63" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="63" id="VcC-N3-hia"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.77625457314670387" green="0.65573487684350329" blue="0.23250131380435504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-4O-d5V">
-                                                    <rect key="frame" x="92" y="19" width="273" height="20"/>
+                                                    <rect key="frame" x="118" y="19" width="263" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -293,13 +296,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jJ5-fg-fb9" firstAttribute="centerY" secondItem="Zyj-hh-vSo" secondAttribute="centerY" id="22x-qX-m3I"/>
-                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="width" secondItem="Zyj-hh-vSo" secondAttribute="width" multiplier="0.65942" id="6KQ-MB-bfN"/>
                                                 <constraint firstAttribute="bottom" secondItem="Bx1-4O-d5V" secondAttribute="bottom" constant="19" id="8PV-22-KME"/>
-                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="leading" secondItem="jJ5-fg-fb9" secondAttribute="trailing" constant="30" id="Rw5-vu-zYm"/>
+                                                <constraint firstItem="Bx1-4O-d5V" firstAttribute="leading" secondItem="jJ5-fg-fb9" secondAttribute="trailing" constant="40" id="Rw5-vu-zYm"/>
                                                 <constraint firstItem="Bx1-4O-d5V" firstAttribute="top" secondItem="Zyj-hh-vSo" secondAttribute="top" constant="19" id="ef5-XP-Y1w"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bx1-4O-d5V" secondAttribute="trailing" constant="33" id="mde-8C-wBy"/>
                                                 <constraint firstItem="jJ5-fg-fb9" firstAttribute="leading" secondItem="Zyj-hh-vSo" secondAttribute="leading" constant="15" id="wK3-t9-IpS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="eventLbl" destination="Bx1-4O-d5V" id="eKc-Dt-Quv"/>
                                             <outlet property="timeLbl" destination="jJ5-fg-fb9" id="SGm-9g-bU8"/>
@@ -311,19 +315,35 @@
                                     <outlet property="delegate" destination="KFZ-7l-ANt" id="mBI-cq-KW0"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqv-J3-yoD" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="170" y="413.5" width="74" height="74"/>
+                                <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cqv-J3-yoD" secondAttribute="height" multiplier="1:1" id="WjH-Im-SWA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRipple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AZK-Lf-rjc" firstAttribute="leading" secondItem="JX3-DN-l4v" secondAttribute="leading" id="9Yg-MN-qZK"/>
+                            <constraint firstItem="cqv-J3-yoD" firstAttribute="width" secondItem="AZK-Lf-rjc" secondAttribute="width" multiplier="0.178744" id="B6W-mx-hej"/>
                             <constraint firstItem="JX3-DN-l4v" firstAttribute="bottom" secondItem="AZK-Lf-rjc" secondAttribute="bottom" id="VMf-MV-0y6"/>
                             <constraint firstItem="JX3-DN-l4v" firstAttribute="trailing" secondItem="AZK-Lf-rjc" secondAttribute="trailing" id="cOm-Md-ZDW"/>
+                            <constraint firstItem="cqv-J3-yoD" firstAttribute="centerY" secondItem="AZK-Lf-rjc" secondAttribute="centerY" id="f8Z-gR-qXM"/>
+                            <constraint firstItem="cqv-J3-yoD" firstAttribute="centerX" secondItem="AZK-Lf-rjc" secondAttribute="centerX" id="mCm-3f-pfe"/>
                             <constraint firstItem="AZK-Lf-rjc" firstAttribute="top" secondItem="JX3-DN-l4v" secondAttribute="top" id="tLd-oo-iNF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JX3-DN-l4v"/>
                     </view>
                     <navigationItem key="navigationItem" id="asi-P9-hYx">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="uL7-SN-fzu">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="uL7-SN-fzu">
                             <rect key="frame" x="125" y="5.5" width="164" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -332,12 +352,14 @@
                                 <segment title="Day 3"/>
                             </segments>
                             <color key="tintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="selectedSegmentTintColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="valChanged:" destination="KFZ-7l-ANt" eventType="valueChanged" id="gu2-UM-dff"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadingView" destination="cqv-J3-yoD" id="g3g-ft-p0N"/>
                         <outlet property="segmentedControl" destination="uL7-SN-fzu" id="0CJ-3g-Be8"/>
                         <outlet property="tableView" destination="AZK-Lf-rjc" id="px4-NR-ww8"/>
                     </connections>
