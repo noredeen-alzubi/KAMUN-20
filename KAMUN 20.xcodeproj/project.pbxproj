@@ -12,6 +12,7 @@
 		0B2034B524026E0100AD2D1C /* DOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2034B424026E0100AD2D1C /* DOSViewController.swift */; };
 		0B2034B724026F1100AD2D1C /* DOSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2034B624026F1100AD2D1C /* DOSTableViewCell.swift */; };
 		0B2034B924026FDB00AD2D1C /* DOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2034B824026FDB00AD2D1C /* DOS.swift */; };
+		0B2034BB2403AC4B00AD2D1C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2034BA2403AC4B00AD2D1C /* ShadowView.swift */; };
 		0B31F91223EF4D21007E8E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31F91123EF4D21007E8E99 /* AppDelegate.swift */; };
 		0B31F91923EF4D21007E8E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F91723EF4D21007E8E99 /* Main.storyboard */; };
 		0B31F91B23EF4D25007E8E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B31F91A23EF4D25007E8E99 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		0B2034B424026E0100AD2D1C /* DOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOSViewController.swift; sourceTree = "<group>"; };
 		0B2034B624026F1100AD2D1C /* DOSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOSTableViewCell.swift; sourceTree = "<group>"; };
 		0B2034B824026FDB00AD2D1C /* DOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOS.swift; sourceTree = "<group>"; };
+		0B2034BA2403AC4B00AD2D1C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		0B31F90E23EF4D21007E8E99 /* KAMUN 20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KAMUN 20.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B31F91123EF4D21007E8E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B31F91823EF4D21007E8E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				0B497CDB23F83994001FECC1 /* Location.swift */,
 				0B497CED23F85ED2001FECC1 /* Article.swift */,
 				0B2034B824026FDB00AD2D1C /* DOS.swift */,
+				0B2034BA2403AC4B00AD2D1C /* ShadowView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				0B31F96223F083A2007E8E99 /* DashboardViewController.swift in Sources */,
 				0B497CD923F835B3001FECC1 /* LocationsViewController.swift in Sources */,
 				0B497CDC23F83994001FECC1 /* Location.swift in Sources */,
+				0B2034BB2403AC4B00AD2D1C /* ShadowView.swift in Sources */,
 				0B95FCA223FDBBB50065AE63 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +764,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "KAMUN 20/KAMUN 20-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -784,7 +788,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "KAMUN 20/KAMUN 20-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

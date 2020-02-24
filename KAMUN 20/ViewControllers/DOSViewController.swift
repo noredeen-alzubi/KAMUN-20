@@ -36,6 +36,13 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+        let view = UIView(frame: CGRect.zero)
+        view.backgroundColor = UIColor.clear
+        cell.backgroundView = view
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +80,7 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
             self.tableView.reloadData()
             
          self.loadingView.stopAnimating()
-         self.tableView.separatorStyle = .singleLine
 
-            
         })
         
     }

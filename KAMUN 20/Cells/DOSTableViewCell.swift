@@ -15,12 +15,22 @@ class DOSTableViewCell: UITableViewCell {
     @IBOutlet weak var delegateName: UILabel!
     
     
+    
+    
+    @IBOutlet weak var shadowLayer: ShadowView!
+    @IBOutlet weak var mainBackground: UIView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 //        self.layoutMargins = UIEdgeInsets.zero
 //        self.contentView.layoutMargins.left = 20
+        self.mainBackground.layer.cornerRadius = 8
+        self.mainBackground.layer.masksToBounds = true
+        self.shadowLayer.layer.cornerRadius = 8
+        self.shadowLayer.layer.masksToBounds = false
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
