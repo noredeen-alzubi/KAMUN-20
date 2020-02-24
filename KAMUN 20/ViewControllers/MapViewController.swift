@@ -29,6 +29,8 @@ class MapViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
+
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         self.navigationController?.view.backgroundColor = nil
 

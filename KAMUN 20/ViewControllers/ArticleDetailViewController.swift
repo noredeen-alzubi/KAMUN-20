@@ -36,6 +36,11 @@ class ArticleDetailViewController: UIViewController {
             self.navigationController?.navigationBar.shadowImage = UIImage()
             self.navigationController?.navigationBar.isTranslucent = true
             self.navigationController?.view.backgroundColor = UIColor.clear
+       self.articleImg.layer.masksToBounds = false;
+        self.articleImg.layer.cornerRadius = 8;
+        self.articleImg.layer.shadowOffset = CGSize(width: 5.0, height: 5.0);
+        self.articleImg.layer.shadowRadius = 5;
+        self.articleImg.layer.shadowOpacity = 0.5;
     }
     
     
@@ -43,9 +48,7 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        articleImg.layer.cornerRadius = 8
-        articleImg.layer.masksToBounds = true
-        articleImg.clipsToBounds = true
+        
     overrideUserInterfaceStyle = .light
         
         articleAuthor.text = author_

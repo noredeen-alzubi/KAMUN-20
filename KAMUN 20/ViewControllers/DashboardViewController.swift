@@ -137,7 +137,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 //setters
                 self.loadingView.stopAnimating()
                 self.weatherImgView.image = UIImage(named: iconName)
-                self.tempLbl.text = "\(Int(round(JSONTemp["temp"].doubleValue - 273.15)))"
+                self.tempLbl.text = "\((Int(round(JSONTemp["temp"].doubleValue - 273.15)))+1)"
                 
                 
             }

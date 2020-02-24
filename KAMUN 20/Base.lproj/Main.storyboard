@@ -289,7 +289,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-4O-d5V">
                                                     <rect key="frame" x="118" y="19" width="263" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -422,7 +422,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-1N-Wlv">
-                                                    <rect key="frame" x="164" y="36" width="139" height="22"/>
+                                                    <rect key="frame" x="164" y="36" width="133" height="22"/>
                                                     <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -513,34 +513,34 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-w8-UEa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="677.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ip" translatesAutoresizingMaskIntoConstraints="NO" id="pZI-7Q-g2g">
-                                                <rect key="frame" x="71" y="1" width="272" height="175"/>
+                                                <rect key="frame" x="71" y="1" width="272" height="200"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="175" id="fyG-tm-5OI"/>
+                                                    <constraint firstAttribute="height" constant="200" id="fyG-tm-5OI"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19/19/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-Gn-TOw">
-                                                <rect key="frame" x="48" y="201" width="318" height="22.5"/>
+                                                <rect key="frame" x="48" y="226" width="318" height="19"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noredeen Al-Zu'bi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-mb-POV">
-                                                <rect key="frame" x="48" y="230.5" width="318" height="22.5"/>
+                                                <rect key="frame" x="48" y="252" width="318" height="19"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="19"/>
                                                 <color key="textColor" red="0.53725123409999997" green="0.14632695909999999" blue="0.8157337308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE TITLE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-eF-3Vn">
-                                                <rect key="frame" x="40" y="281" width="334" height="30.5"/>
+                                                <rect key="frame" x="40" y="299" width="334" height="26"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Semibold" family="Adobe Caslon Pro" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-Aj-Hx5">
-                                                <rect key="frame" x="45" y="347.5" width="324" height="300"/>
+                                                <rect key="frame" x="45" y="361" width="324" height="281.5"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="ACaslonPro-Regular" family="Adobe Caslon Pro" pointSize="17"/>
@@ -710,14 +710,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koe-Cz-91z">
-                                <rect key="frame" x="0.0" y="152" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="155.5" width="414" height="269"/>
                                 <connections>
                                     <outlet property="dataSource" destination="izy-fj-Lbg" id="Sbw-QU-1id"/>
                                     <outlet property="delegate" destination="izy-fj-Lbg" id="bEh-vK-eg6"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Forum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGB-Sc-REH">
-                                <rect key="frame" x="154" y="124" width="106.5" height="20"/>
+                                <rect key="frame" x="153" y="124" width="108" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -753,7 +753,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-9A-bm8" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="313.5" y="429.5" width="47.5" height="47.5"/>
+                                <rect key="frame" x="313.5" y="433" width="47.5" height="47.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6y-9A-bm8" secondAttribute="height" multiplier="1:1" id="UCj-Mz-S7h"/>
@@ -807,7 +807,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.46089220050000002" green="0.056367874149999997" blue="0.79239362479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -828,7 +828,7 @@
         <scene sceneID="Xfm-Rd-uID">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OHr-H1-Iet" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="rectangle.grid.2x2" catalog="system" selectedImage="rectangle.grid.2x2.fill" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZIx-iY-vFt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -844,11 +844,11 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--Second-->
+        <!--International Press-->
         <scene sceneID="ojf-L0-2mF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wlZ-D5-0Pb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" selectedImage="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="International Press" image="quote.bubble" catalog="system" selectedImage="quote.bubble.fill" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TOS-uV-bXh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -868,10 +868,12 @@
     <resources>
         <image name="arrow.right" catalog="system" width="64" height="48"/>
         <image name="dos" width="360" height="360"/>
-        <image name="first" width="30" height="30"/>
         <image name="first-1" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ip" width="2044" height="1360"/>
-        <image name="second" width="30" height="30"/>
+        <image name="quote.bubble" catalog="system" width="64" height="54"/>
+        <image name="quote.bubble.fill" catalog="system" width="64" height="54"/>
+        <image name="rectangle.grid.2x2" catalog="system" width="64" height="48"/>
+        <image name="rectangle.grid.2x2.fill" catalog="system" width="64" height="48"/>
         <image name="small-logo" width="179" height="181"/>
     </resources>
     <inferredMetricsTieBreakers>
