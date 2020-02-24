@@ -626,7 +626,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fv6-f7-mOo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DOScell" rowHeight="314" id="1Jm-op-eOe" customClass="DOSTableViewCell" customModule="KAMUN_20" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="314"/>
@@ -681,11 +681,26 @@
                                     <outlet property="delegate" destination="dsh-Sv-Rpm" id="Jor-jd-bHn"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeA-Wy-MwB" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="170" y="413.5" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WeA-Wy-MwB" secondAttribute="height" multiplier="1:1" id="nog-Ae-QmG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleRipple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="trailing" secondItem="Fv6-f7-mOo" secondAttribute="trailing" id="1aZ-aN-Pcn"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="top" secondItem="Rqc-0j-4Vm" secondAttribute="top" id="AWq-7l-P5b"/>
+                            <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerX" secondItem="Fv6-f7-mOo" secondAttribute="centerX" id="BWd-UL-jQm"/>
+                            <constraint firstItem="WeA-Wy-MwB" firstAttribute="centerY" secondItem="Fv6-f7-mOo" secondAttribute="centerY" id="IYU-Uz-Mzn"/>
+                            <constraint firstItem="WeA-Wy-MwB" firstAttribute="width" secondItem="Fv6-f7-mOo" secondAttribute="width" multiplier="0.178744" id="pzN-Fj-Zlh"/>
                             <constraint firstItem="Fv6-f7-mOo" firstAttribute="leading" secondItem="Rqc-0j-4Vm" secondAttribute="leading" id="sGJ-OP-IDr"/>
                             <constraint firstItem="Rqc-0j-4Vm" firstAttribute="bottom" secondItem="Fv6-f7-mOo" secondAttribute="bottom" id="um6-JP-esi"/>
                         </constraints>
@@ -693,6 +708,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XMm-ZB-Fnc"/>
                     <connections>
+                        <outlet property="loadingView" destination="WeA-Wy-MwB" id="4kz-uv-dXa"/>
                         <outlet property="tableView" destination="Fv6-f7-mOo" id="c4n-Uh-WaL"/>
                     </connections>
                 </viewController>
@@ -709,14 +725,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koe-Cz-91z">
-                                <rect key="frame" x="0.0" y="152" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="155.5" width="414" height="269"/>
                                 <connections>
                                     <outlet property="dataSource" destination="izy-fj-Lbg" id="Sbw-QU-1id"/>
                                     <outlet property="delegate" destination="izy-fj-Lbg" id="bEh-vK-eg6"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Forum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGB-Sc-REH">
-                                <rect key="frame" x="154" y="124" width="106.5" height="20"/>
+                                <rect key="frame" x="153" y="124" width="108" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -752,7 +768,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-9A-bm8" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="313.5" y="429.5" width="47.5" height="47.5"/>
+                                <rect key="frame" x="313.5" y="433" width="47.5" height="47.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6y-9A-bm8" secondAttribute="height" multiplier="1:1" id="UCj-Mz-S7h"/>

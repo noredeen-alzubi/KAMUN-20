@@ -8,12 +8,14 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
 
 class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var delegates: [DOS] = [DOS]()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,11 +39,12 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadingView.startAnimating()
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 320
         overrideUserInterfaceStyle = .light
        // self.loadingVIew.startAnimating()
-        //self.tableView.separatorStyle = .none
+        self.tableView.separatorStyle = .none
 
         setUpConnections()
         
@@ -69,7 +72,7 @@ class DOSViewController: UIViewController, UITableViewDataSource, UITableViewDel
             self.tableView.separatorColor = UITableView().separatorColor
             self.tableView.reloadData()
             
-         //self.loadingVIew.stopAnimating()
+         self.loadingView.stopAnimating()
          self.tableView.separatorStyle = .singleLine
 
             
