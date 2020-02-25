@@ -103,7 +103,6 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
-        
         self.navigationController?.isNavigationBarHidden = true
     }
     
@@ -121,8 +120,22 @@ class ArticlesViewController: UIViewController, UITableViewDelegate, UITableView
 
                
            })
+        
+        Database.database().reference().child("articles").observe(.childChanged, with: { snapshot in
+            let dictArticle = snapshot.value as? [String:AnyObject] ?? [:]
+            self.articles[self.indexOf(id: snapshot.key)] = Article(dictionary: dictArticle, id: snapshot.key)
+            self.tableView.reloadData()
+        })
            
        }
+    func indexOf(id: String) -> Int{
+        for i in 0..<articles.count{
+            if(articles[i].id == id){
+                return i;
+            }
+        }
+        return -1
+    }
     
 
     /*

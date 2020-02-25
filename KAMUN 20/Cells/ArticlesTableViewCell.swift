@@ -33,8 +33,7 @@ class ArticlesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        articleImgView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+    articleImgView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         articleImgView.sd_imageIndicator = SDWebImageProgressIndicator.`default`
 
         

@@ -23,6 +23,7 @@ class DOSTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.delegateImg.sd_imageTransition = .fade
         // Initialization code
 //        self.layoutMargins = UIEdgeInsets.zero
 //        self.contentView.layoutMargins.left = 20
