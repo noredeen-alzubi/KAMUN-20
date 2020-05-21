@@ -45,9 +45,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
         
     
-    var iconArray = [UIImage(named:"schedule"), UIImage(named:"map"), UIImage(named:"locations")]
+    var iconArray = [UIImage(named:"schedule"), UIImage(named:"map"), UIImage(named:"locations"), UIImage(named: "info-1")]
     
-    var destinations = [ScheduleViewController(), MapViewController()]
     
     let weather_key = "dcb1fae3f28fcf9637702ab46ba595a6"
     

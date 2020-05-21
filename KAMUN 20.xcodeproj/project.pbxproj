@@ -49,6 +49,7 @@
 		0B60BB9C23F4773000BA4EF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60BB9B23F4773000BA4EF5 /* MapViewController.swift */; };
 		0B95FCA223FDBBB50065AE63 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95FCA123FDBBB50065AE63 /* ArticleDetailViewController.swift */; };
 		0B95FCA7240002E70065AE63 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95FCA6240002E70065AE63 /* ScheduleTableViewCell.swift */; };
+		0B9BBF9B2404E37500F468F9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BBF9A2404E37500F468F9 /* InfoViewController.swift */; };
 		53B5820CD2794C50021804A6 /* libPods-KAMUN 20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF0AF58458BE20DBB85C628 /* libPods-KAMUN 20.a */; };
 		9E581EE41B2CA842519FC996 /* libPods-KAMUN 20Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A7C5162C119F9B16B759EC /* libPods-KAMUN 20Tests.a */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		0B95FCA123FDBBB50065AE63 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		0B95FCA323FFB85B0065AE63 /* KAMUN 20-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KAMUN 20-Bridging-Header.h"; sourceTree = "<group>"; };
 		0B95FCA6240002E70065AE63 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		0B9BBF9A2404E37500F468F9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		13A7C5162C119F9B16B759EC /* libPods-KAMUN 20Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KAMUN 20Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A50843DAB903AEF06E970A /* Pods-KAMUN 20Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAMUN 20Tests.debug.xcconfig"; path = "Target Support Files/Pods-KAMUN 20Tests/Pods-KAMUN 20Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		66405AB292D5362740516278 /* libPods-KAMUN 20-KAMUN 20UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KAMUN 20-KAMUN 20UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +226,7 @@
 				0B497CD823F835B3001FECC1 /* LocationsViewController.swift */,
 				0B497CEB23F85E73001FECC1 /* ArticlesViewController.swift */,
 				0B2034B424026E0100AD2D1C /* DOSViewController.swift */,
+				0B9BBF9A2404E37500F468F9 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				0B60BB9A23F476D700BA4EF5 /* ScheduleViewController.swift in Sources */,
 				0B95FCA7240002E70065AE63 /* ScheduleTableViewCell.swift in Sources */,
 				0B2034B524026E0100AD2D1C /* DOSViewController.swift in Sources */,
+				0B9BBF9B2404E37500F468F9 /* InfoViewController.swift in Sources */,
 				0B60BB9C23F4773000BA4EF5 /* MapViewController.swift in Sources */,
 				0B497CEC23F85E73001FECC1 /* ArticlesViewController.swift in Sources */,
 				0B2034B724026F1100AD2D1C /* DOSTableViewCell.swift in Sources */,
