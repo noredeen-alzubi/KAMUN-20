@@ -1,6 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/30037359/51077381-ce228480-16ae-11e9-9ebd-7f85ec384a59.png" alt="app image" width="20%"/></p>
-
-
+<p align="center"><img src="https://user-images.githubusercontent.com/30037359/51077381-ce228480-16ae-11e9-9ebd-7f85ec384a59.png" width="20%"></img> <img src="https://user-images.githubusercontent.com/30037359/82532830-c7313f00-9b4a-11ea-9382-ffc55760e92f.png" width="20%"></img> </p>
 
 
 # KAMUN-20 
