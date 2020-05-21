@@ -5,7 +5,7 @@
 
 # KAMUN-20 
 
-<a href="https://github.com/noredeen-alzubi/KAMUN-19/blob/master/LICENSE"><img src="https://img.shields.io/apm/l/vim-mode.svg"></a>
+<a href="https://github.com/noredeen-alzubi/KAMUN-20/blob/master/LICENSE"><img src="https://img.shields.io/apm/l/vim-mode.svg"></a>
 
  **The NEW KAMUN conference companion app for iOS**
  The all new and greatly improved KAMUN app. The previous app is <a href="https://github.com/noredeen-alzubi/KAMUN-19">KAMUN-19</a>, also publicly available on GitHub.
