@@ -15,6 +15,6 @@
 <p align="center">
  Now Available on the App Store!
   <br>
-  <a href="https://itunes.apple.com/us/app/kamun-19/id1455374131?ls=1&mt=8"> <img src="https://user-images.githubusercontent.com/30037359/54473568-34787000-47e2-11e9-9682-2a8836b1c26a.png"></a>
+  <a href="https://apps.apple.com/us/app/kamun-20/id1500366555"> <img src="https://user-images.githubusercontent.com/30037359/54473568-34787000-47e2-11e9-9682-2a8836b1c26a.png"></a>
  
  </p>
