@@ -25,11 +25,11 @@
  
  
  ## Features:
- * Live weather on the homepage
- * Schedule synced in real time for sudden changes or updates
- * Location data synced in real time from a Firebase Database to account for weather-induced location changes
- * An annotated map with location search support
- * News feed section ("International Press") that hosts articles written by the attendees (pushed live to Firebase from a locked portal)
- * Awards section that functions like the articles page (realtime updated from Firebase)
- * Image caching for all pages for higher network effeciency and a better consumption experience
- * Loading animations on all pages for smooth navigation and usage
+ * Live weather on the homepage via OpenWeather API.
+ * Schedule synced in real time for sudden changes or updates.
+ * Location data synced in real time from a Firebase Database to account for weather-induced location changes.
+ * An annotated map with location search support.
+ * News feed section ("International Press") that hosts articles written by the attendees (pushed live to Firebase from a locked portal).
+ * Awards section that functions like the articles page (realtime updated from Firebase).
+ * Image caching throughout the app for higher network effeciency and a better browsing experience.
+ * Loading animations on all pages for smooth navigation and usage.
