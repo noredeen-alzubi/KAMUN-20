@@ -8,7 +8,7 @@
  **_The NEW KAMUN conference companion app for iOS_**
  <br>
  <br>
- The all new and greatly improved KAMUN app. The previous app is <a href="https://github.com/noredeen-alzubi/KAMUN-19">KAMUN-19</a>, also publicly available on GitHub.
+ The new and improved KAMUN app. The previous app is <a href="https://github.com/noredeen-alzubi/KAMUN-19">KAMUN-19</a>.
 
  <br>
    
